@@ -1,11 +1,13 @@
+import colorBlob from "../../images/colorBlob.png";
+
 export default function Landing(){
     return(
     <div className="landing">
-        <div class="titleSection">
-            <h1 class="name">Samuel Avilés</h1>
-            <p class="subtext">Full Stack Developer</p>
+        <div className="titleSection">
+            <h1 className="name">Samuel Avilés</h1>
+            <p className="subtext">Full Stack Developer</p>
         </div>
-        <img src="" className="backgroundImage" />
+        <img src={colorBlob} className="colorBlob" alt="" />
     </div>
     )
 }
