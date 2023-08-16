@@ -6,6 +6,7 @@ import Landing from './Components/Landing/Landing';
 import Projects from './Components/Projects/Projects';
 
 function App() {
+
   return (
     <div className="App">
       <Header />
