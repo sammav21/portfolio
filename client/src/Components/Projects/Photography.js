@@ -10,7 +10,7 @@ export default function Photography(){
             {openProject && 
             <div className="openProject">
                 <div className="infoBar">
-                    <p>full stack developer</p>
+                    <p>front end</p>
                     <p>|</p>
                     <p>view code</p>
                     <p>|</p>

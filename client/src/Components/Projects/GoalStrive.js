@@ -10,7 +10,7 @@ export default function GoalStrive(){
             {openProject && 
             <div className="openProject">
                 <div className="infoBar">
-                    <p>full stack developer</p>
+                    <p>full stack</p>
                     <p>|</p>
                     <p>view code</p>
                     <p>|</p>
