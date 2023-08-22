@@ -1,19 +1,20 @@
 import {useState} from 'react';
-import logo from '../../images/YoBurgerLogo.png';
+import yellowBlob from '../../images/yellow-blob.png';
+import blueBlob from '../../images/blue-blob.png';
 
-export default function YoBurger(){
+export default function Quizzical(){
 
     const [openProject, setOpenProject] = useState(false);
 
     return(
-        <li className="projectTitleContainer" id="yoBurgerContainer">
-            <div className="projectTitle"  onClick={() => setOpenProject(!openProject)}>
-                <img src={logo} id="yoBurgerTitle"/>
-            </div>
+        <li className="projectTitleContainer" id="quizzicalContainer">
+             <img src={yellowBlob} className='yellowBlob' />
+            <h3 className="projectTitle" id="quizzicalTitle" onClick={() => setOpenProject(!openProject)}>Quizzical</h3>
+            
             {openProject && 
             <div className="openProject">
                 <div className="infoBar">
-                    <p>front end + ui/ux</p>
+                    <p>front end</p>
                     <p>|</p>
                     <p>view code</p>
                     <p>|</p>
@@ -22,16 +23,17 @@ export default function YoBurger(){
                 <div className="infoContainer">
                     <div className="description">
                         <div className="descriptionText"> 
-                        Yo-Burger is a redesign of a local establishment's website. Challenging myself to apply newly learned front end techniques to a real world project, I crafted a vibrant and more user-friendly interface that I felt better represented the neighborhood favorite burger joint.
+                        Quizzical is an interactive trivia application. The application parses through data collected from a trivia API to create a trivia game. This project was the final assignment from the Scrimba React course.
                         </div>
                         <div className="techStack">
-                            Tech Stack: HTML, CSS, JS
+                            Tech Stack: React
                         </div>
                     </div>
                     <div className="media">
                         <div className="image"></div>
                     </div>
                 </div>
+                <img src={blueBlob} className='blueBlob' />
             </div>
             }
             
