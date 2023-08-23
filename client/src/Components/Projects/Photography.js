@@ -12,9 +12,9 @@ export default function Photography(){
                 <div className="infoBar">
                     <p>front end</p>
                     <p>|</p>
-                    <p>view code</p>
+                    <a href='https://github.com/sammav21/Photo-Portfolio' target="_blank" rel="noopener noreferrer">view code</a>
                     <p>|</p>
-                    <p>visit site?</p>
+                    <a href='https://samuelavilesphotography.com/' target="_blank" rel="noopener noreferrer">visit site</a>
                 </div>
                 <div className="infoContainer">
                     <div className="description">

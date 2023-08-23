@@ -15,9 +15,9 @@ export default function YoBurger(){
                 <div className="infoBar">
                     <p>front end + ui/ux</p>
                     <p>|</p>
-                    <p>view code</p>
+                    <a href='https://github.com/sammav21/Clone-Redesign' target="_blank" rel="noopener noreferrer">view code</a>
                     <p>|</p>
-                    <p>visit site?</p>
+                    <a href='https://sammav21.github.io/Clone-Redesign/index.html' target="_blank" rel="noopener noreferrer">visit site</a>
                 </div>
                 <div className="infoContainer">
                     <div className="description">

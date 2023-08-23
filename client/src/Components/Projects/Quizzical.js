@@ -16,9 +16,9 @@ export default function Quizzical(){
                 <div className="infoBar">
                     <p>front end</p>
                     <p>|</p>
-                    <p>view code</p>
+                    <a href='https://github.com/sammav21/quiz-react' target="_blank" rel="noopener noreferrer">view code</a>
                     <p>|</p>
-                    <p>visit site?</p>
+                    <a>visit site</a>
                 </div>
                 <div className="infoContainer">
                     <div className="description">
