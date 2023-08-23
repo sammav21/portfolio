@@ -12,9 +12,9 @@ export default function PackingAide(){
                 <div className="infoBar">
                     <p>full stack</p>
                     <p>|</p>
-                    <p>view code</p>
-                    <p>|</p>
-                    <p>watch presentation</p>
+                    <a href='https://github.com/DavidVDeaton/packing-aide' target="_blank" rel="noopener noreferrer">view code</a>
+                    <a>|</a>
+                    <a href='https://www.youtube.com/watch?v=bX3OQgxak7s' target="_blank" rel="noopener noreferrer">watch presentation</a>
                 </div>
                 <div className="infoContainer">
                     <div className="description">

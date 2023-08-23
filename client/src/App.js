@@ -5,17 +5,26 @@ import Experiences from './Components/Experiences/Experiences';
 import Header from './Components/Header/Header';
 import Landing from './Components/Landing/Landing';
 import Projects from './Components/Projects/Projects';
+import colorBlob from "./images/colorBlob.png";
+import {useRef} from 'react';
 
 function App() {
 
+  const experiencesRef = useRef(null);
+  const projectsRef = useRef(null);
+  const aboutRef = useRef(null);
+
   return (
     <div className="App">
-      <Header />
+      <img src={colorBlob} className="colorBlob" alt="Background Graphic" />
+      <div className='main'>
+      <Header experiencesRef={experiencesRef} projectsRef={projectsRef} aboutRef={aboutRef}/>
       <Landing />
-      <Experiences />
-      <Projects />
-      <About />
+      <Experiences experiencesRef={experiencesRef}/>
+      <Projects projectsRef={projectsRef}/>
+      <About aboutRef={aboutRef}/>
       <Contact />
+      </div>
     </div>
   );
 }

@@ -12,9 +12,7 @@ export default function GoalStrive(){
                 <div className="infoBar">
                     <p>full stack</p>
                     <p>|</p>
-                    <p>view code</p>
-                    <p>|</p>
-                    <p>visit site?</p>
+                    <a href='https://github.com/sammav21/goalsList' target="_blank" rel="noopener noreferrer">view code</a>
                 </div>
                 <div className="infoContainer">
                     <div className="description">

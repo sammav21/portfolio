@@ -3,7 +3,9 @@ export default function Card(props){
     return(
         <div className="card"> {/*glass effect?*/}
             <h3 className="cardTitle">{props.title}</h3>
-            <div className="cardImageContainer"></div>
+            <div className="cardImageContainer" id={props.id}> 
+            {props.imageContent}
+            </div>
             <div className="cardTextContainer">
                 <h4>{props.experience}</h4>
                 <p>{props.text}</p>
