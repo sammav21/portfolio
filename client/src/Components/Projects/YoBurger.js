@@ -1,6 +1,6 @@
 import {useState} from 'react';
-import logo from '../../images/YoBurgerLogo.png';
-
+import MEDIA from '../../images/media';
+import Picture from '../Projects/Picture';
 export default function YoBurger(){
 
     const [openProject, setOpenProject] = useState(false);
@@ -8,7 +8,7 @@ export default function YoBurger(){
     return(
         <li className="projectTitleContainer" id="yoBurgerContainer">
             <div className="projectTitle"  onClick={() => setOpenProject(!openProject)}>
-                <img src={logo} id="yoBurgerTitle"/>
+                <img src={MEDIA.yoBurgerLogo} id="yoBurgerTitle"/>
             </div>
             {openProject && 
             <div className="openProject">
@@ -29,7 +29,10 @@ export default function YoBurger(){
                         </div>
                     </div>
                     <div className="media">
-                        <div className="image"></div>
+                        <Picture direction='picture left' src={MEDIA.yoBurgerLanding}/>
+                        <Picture direction='picture right' src={MEDIA.yoBurgerMenu}/>
+                        <Picture direction='picture left' src={MEDIA.yoBurgerVisit}/>
+                        <Picture direction='picture right' src={MEDIA.yoBurgerFooter}/>
                     </div>
                 </div>
             </div>

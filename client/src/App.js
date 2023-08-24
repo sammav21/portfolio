@@ -5,7 +5,7 @@ import Experiences from './Components/Experiences/Experiences';
 import Header from './Components/Header/Header';
 import Landing from './Components/Landing/Landing';
 import Projects from './Components/Projects/Projects';
-import colorBlob from "./images/colorBlob.png";
+import MEDIA from './images/media';
 import {useRef} from 'react';
 
 function App() {
@@ -16,7 +16,7 @@ function App() {
 
   return (
     <div className="App">
-      <img src={colorBlob} className="colorBlob" alt="Background Graphic" />
+      <img src={MEDIA.colorBlob} className="colorBlob" alt="Background Graphic" />
       <div className='main'>
       <Header experiencesRef={experiencesRef} projectsRef={projectsRef} aboutRef={aboutRef}/>
       <Landing />
