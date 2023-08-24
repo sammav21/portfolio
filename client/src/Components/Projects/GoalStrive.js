@@ -1,4 +1,6 @@
 import {useState} from 'react';
+import MEDIA from '../../images/media';
+import Video from './Video';
 
 export default function GoalStrive(){
 
@@ -24,7 +26,10 @@ export default function GoalStrive(){
                         </div>
                     </div>
                     <div className="media">
-                        <div className="image"></div>
+                        <Video direction='video left' url={MEDIA.goalStriveOpening}/>
+                        <Video direction='video right' url={MEDIA.goalStriveTips}/>
+                        <Video direction='video left' url={MEDIA.goalStriveAdd}/>
+                        <Video direction='video right' url={MEDIA.goalStriveUpdate}/>
                     </div>
                 </div>
             </div>

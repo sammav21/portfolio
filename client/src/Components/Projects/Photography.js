@@ -1,4 +1,6 @@
 import {useState} from 'react';
+import Picture from './Picture';
+import MEDIA from '../../images/media';
 
 export default function Photography(){
 
@@ -26,7 +28,9 @@ export default function Photography(){
                         </div>
                     </div>
                     <div className="media">
-                        <div className="image"></div>
+                        <Picture direction='picture left' src={MEDIA.photoLanding}/>
+                        <Picture direction='picture right' src={MEDIA.photoPhotos}/>
+                        <Picture direction='picture left' src={MEDIA.photoAbout}/>
                     </div>
                 </div>
             </div>

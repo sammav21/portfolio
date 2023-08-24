@@ -1,11 +1,11 @@
-import pic from '../../images/Headshot.jpg';
+import MEDIA from "../../images/media";
 
 export default function About(props){
     return(
     <div className="about" ref={props.aboutRef}>
         <h2 className="sectionTitle">ABOUT</h2>
         <div className="aboutContent">
-            <img src={pic} className='headshot' />
+            <img src={MEDIA.headshot} className='headshot' />
             <p className='aboutMeText'>Hey. I'm Sam. A full stack developer from the Bronx.<br /> 
             <br /> 
             I like scouring the internet to learn new skills like photography, video editing and sound design. So it's no surprise I went down the rabbit hole when a friend suggested I look into the world of coding. I enjoy the creation process from initial concept to completion, and I take pride in bringing an idea to life. Building front end projects and gaining professional back end training along the way, my coding toolkit now spans the spectrum of software development.

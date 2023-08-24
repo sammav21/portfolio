@@ -1,6 +1,5 @@
 import {useState} from 'react';
-import yellowBlob from '../../images/yellow-blob.png';
-import blueBlob from '../../images/blue-blob.png';
+import MEDIA from '../../images/media';
 
 export default function Quizzical(){
 
@@ -8,7 +7,7 @@ export default function Quizzical(){
 
     return(
         <li className="projectTitleContainer" id="quizzicalContainer">
-             <img src={yellowBlob} className='yellowBlob' />
+             <img src={MEDIA.yellowBlob} className='yellowBlob' />
             <h3 className="projectTitle" id="quizzicalTitle" onClick={() => setOpenProject(!openProject)}>Quizzical</h3>
             
             {openProject && 
@@ -33,7 +32,7 @@ export default function Quizzical(){
                         <div className="image"></div>
                     </div>
                 </div>
-                <img src={blueBlob} className='blueBlob' />
+                <img src={MEDIA.blueBlob} className='blueBlob' />
             </div>
             }
             

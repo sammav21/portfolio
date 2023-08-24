@@ -1,4 +1,6 @@
 import {useState} from 'react';
+import MEDIA from '../../images/media';
+import Video from './Video';
 
 export default function PackingAide(){
 
@@ -26,7 +28,11 @@ export default function PackingAide(){
                         </div>
                     </div>
                     <div className="media">
-                        <div className="image"></div>
+                        <Video direction='video left' url={MEDIA.packingLanding}/>
+                        <Video direction='video right' url={MEDIA.packingAdd}/>
+                        <Video direction='video left' url={MEDIA.packingEdit}/>
+                        <Video direction='video right' url={MEDIA.packingUpdateContainer}/>
+                        <Video direction='video left' url={MEDIA.packingSearch}/>
                     </div>
                 </div>
             </div>
