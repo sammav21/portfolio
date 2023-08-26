@@ -1,8 +1,21 @@
 import MEDIA from "../../images/media";
+import {motion, useScroll, useTransform} from 'framer-motion';
+import { useRef } from "react";
 
 export default function About(props){
+
+    const targetRef = useRef(null);
+    const {scrollYProgress} = useScroll({
+        target: targetRef,
+        offset: ['start end', 'end end', 'end start']
+    });
+    {console.log(scrollYProgress)}
+
+    const opacity = useTransform(scrollYProgress, [0, .5, .80, 1], [0, 1, 1, 0]);
+
     return(
-    <div className="about" ref={props.aboutRef}>
+    <div ref={props.aboutRef} className="about">
+    <motion.section ref={targetRef} style={{opacity}}>
         <h2 className="sectionTitle">ABOUT</h2>
         <div className="aboutContent">
             <img src={MEDIA.headshot} className='headshot' />
@@ -15,11 +28,12 @@ export default function About(props){
             <br /> 
             <br /> 
             Here are some useful links: 
-            <a href='https://github.com/sammav21' target="_blank" rel="noopener noreferrer">Github</a>
-            <a href='https://www.linkedin.com/in/samuel-avil%C3%A9s-a8398b93/' target="_blank" rel="noopener noreferrer">LinkedIn</a>
-            <a href='https://drive.google.com/file/d/1f1pUTAEXoQ0aqZSizgNw3M9b7wn7jrFn/view?usp=sharing' target="_blank" rel="noopener noreferrer">Resume</a>
+            <a className='links' href='https://drive.google.com/file/d/1f1pUTAEXoQ0aqZSizgNw3M9b7wn7jrFn/view?usp=sharing' target="_blank" rel="noopener noreferrer">Resume</a>
+            <a className='links' href='https://github.com/sammav21' target="_blank" rel="noopener noreferrer">GitHub</a>
+            <a className='links' href='https://www.linkedin.com/in/samuel-avil%C3%A9s-a8398b93/' target="_blank" rel="noopener noreferrer">LinkedIn</a>
             </p>
         </div>
+    </motion.section>
     </div>
     )
 }

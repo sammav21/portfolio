@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from "react"
+import {motion, useScroll, useTransform} from 'framer-motion';
 import emailjs from "@emailjs/browser" ;
 
 export default function Contact(){
@@ -26,8 +27,17 @@ export default function Contact(){
         return () => clearTimeout(timer);
     }, [emailSent]);
 
+    const targetRef = useRef(null);
+    const {scrollYProgress} = useScroll({
+        target: targetRef,
+        offset: ['start end', 'end end']
+    });
+    {console.log(scrollYProgress)}
+
+    const opacity = useTransform(scrollYProgress, [0, .7], [0, 1]);
+
     return(
-    <div className="contact">
+    <motion.section className="contact" ref={targetRef} style={{opacity}}>
         <h2 className="sectionTitle">Contact</h2>
         <form ref={form} onSubmit={sendEmail}>
                 <input type="text" id="username" name="username" className="input" placeholder="name" required/>
@@ -37,6 +47,6 @@ export default function Contact(){
                 {emailSent ? <p>Your message is on its way!</p> : <input type="submit" id="submit" /> }
         </form>
         
-    </div>
+    </motion.section>
     )
 }

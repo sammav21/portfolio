@@ -12,21 +12,21 @@ export default function YoBurger(){
             </div>
             {openProject && 
             <div className="openProject">
-                <div className="infoBar">
-                    <p>front end + ui/ux</p>
-                    <p>|</p>
-                    <a href='https://github.com/sammav21/Clone-Redesign' target="_blank" rel="noopener noreferrer">view code</a>
-                    <p>|</p>
-                    <a href='https://sammav21.github.io/Clone-Redesign/index.html' target="_blank" rel="noopener noreferrer">visit site</a>
-                </div>
-                <div className="infoContainer">
-                    <div className="description">
+                <div className="infoSide">
                         <div className="descriptionText"> 
                         Yo-Burger is a redesign of a local establishment's website. Challenging myself to apply newly learned front end techniques to a real world project, I crafted a vibrant and more user-friendly interface that I felt better represented the neighborhood favorite burger joint.
                         </div>
                         <div className="techStack">
-                            Tech Stack: HTML, CSS, JS
+                            Tech Stack:<br/>HTML, CSS, JS
                         </div>
+                </div>
+                <div className="mediaSide">
+                    <div className="infoBar">
+                        <p>front end + ui/ux</p>
+                        <p>|</p>
+                        <a href='https://github.com/sammav21/Clone-Redesign' target="_blank" rel="noopener noreferrer">view code</a>
+                        <p>|</p>
+                        <a href='https://sammav21.github.io/Clone-Redesign/index.html' target="_blank" rel="noopener noreferrer">visit site</a>
                     </div>
                     <div className="media">
                         <Picture direction='picture left' src={MEDIA.yoBurgerLanding}/>

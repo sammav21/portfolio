@@ -1,13 +1,18 @@
-import GoalStrive from "./GoalStrive";
-import PackingAide from "./PackingAide";
-import Photography from "./Photography";
-import Quizzical from "./Quizzical";
-import YoBurger from "./YoBurger";
+import { useRef } from 'react';
+import {GoalStrive, PackingAide, Photography, Quizzical, YoBurger} from '../Components'
+import { useScroll, useTransform, motion } from 'framer-motion';
 
 export default function Projects(props){
+    const targetRef = useRef(null);
+    const {scrollYProgress} = useScroll({
+        target: targetRef,
+        offset: ['start end', 'end end', 'end start']
+    });
+    const opacity = useTransform(scrollYProgress, [0, .4, .80, 1], [0, 1, 1, 0]);
 
     return(
-    <div className="projects" ref={props.projectsRef}>
+    <div ref={props.projectsRef} className="projects">
+    <motion.section  style={{opacity}} ref={targetRef}>
         <h2 className="sectionTitle">PROJECTS</h2>
         <ul className="projectList">
             <PackingAide />            
@@ -16,6 +21,7 @@ export default function Projects(props){
             <YoBurger />
             <Quizzical />
         </ul>
+    </motion.section>
     </div>
     )
 }
