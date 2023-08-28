@@ -16,10 +16,12 @@ function App() {
       <div className='main'>
           <Header experiencesRef={experiencesRef} projectsRef={projectsRef} aboutRef={aboutRef}/>
           <Landing/>
+          
           <Experiences experiencesRef={experiencesRef}/>
           <Projects projectsRef={projectsRef}/>
           <About aboutRef={aboutRef}/>
           <Contact />
+          
       </div>
     </div>
   );
