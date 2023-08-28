@@ -12,21 +12,21 @@ export default function Quizzical(){
             
             {openProject && 
             <div className="openProject">
-                <div className="infoBar">
-                    <p>front end</p>
-                    <p>|</p>
-                    <a href='https://github.com/sammav21/quiz-react' target="_blank" rel="noopener noreferrer">view code</a>
-                    <p>|</p>
-                    <a>visit site</a>
-                </div>
-                <div className="infoContainer">
-                    <div className="description">
+                <div className="infoSide">
                         <div className="descriptionText"> 
                         Quizzical is an interactive trivia application. The application parses through data collected from a trivia API to create a trivia game. This project was the final assignment from the Scrimba React course.
                         </div>
                         <div className="techStack">
-                            Tech Stack: React
+                            Tech Stack:<br/>React
                         </div>
+                </div>
+                <div className="mediaSide">
+                    <div className="infoBar">
+                        <p>front end</p>
+                        <p>|</p>
+                        <a href='https://github.com/sammav21/quiz-react' target="_blank" rel="noopener noreferrer">view code</a>
+                        <p>|</p>
+                        <a>visit site</a>
                     </div>
                     <div className="media">
                         <div className="image"></div>

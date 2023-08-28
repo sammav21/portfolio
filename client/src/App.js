@@ -1,12 +1,8 @@
 import './App.css';
-import About from './Components/About/About';
-import Contact from './Components/Contact/Contact';
-import Experiences from './Components/Experiences/Experiences';
-import Header from './Components/Header/Header';
-import Landing from './Components/Landing/Landing';
-import Projects from './Components/Projects/Projects';
 import MEDIA from './images/media';
 import {useRef} from 'react';
+import {About, Contact, Experiences, Header, Landing, Projects} from './Components/Components'
+
 
 function App() {
 
@@ -18,12 +14,12 @@ function App() {
     <div className="App">
       <img src={MEDIA.colorBlob} className="colorBlob" alt="Background Graphic" />
       <div className='main'>
-      <Header experiencesRef={experiencesRef} projectsRef={projectsRef} aboutRef={aboutRef}/>
-      <Landing />
-      <Experiences experiencesRef={experiencesRef}/>
-      <Projects projectsRef={projectsRef}/>
-      <About aboutRef={aboutRef}/>
-      <Contact />
+          <Header experiencesRef={experiencesRef} projectsRef={projectsRef} aboutRef={aboutRef}/>
+          <Landing/>
+          <Experiences experiencesRef={experiencesRef}/>
+          <Projects projectsRef={projectsRef}/>
+          <About aboutRef={aboutRef}/>
+          <Contact />
       </div>
     </div>
   );
