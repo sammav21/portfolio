@@ -7,7 +7,7 @@ export default function YoBurger(){
 
     return(
         <li className="projectTitleContainer" id="yoBurgerContainer">
-            <div className="projectTitle"  onClick={() => setOpenProject(!openProject)}>
+            <div className={openProject ? "projectTitle" : "projectTitle closed"}  onClick={() => setOpenProject(!openProject)}>
                 <img src={MEDIA.yoBurgerLogo} id="yoBurgerTitle"/>
             </div>
             {openProject && 
@@ -24,9 +24,11 @@ export default function YoBurger(){
                     <div className="infoBar">
                         <p>front end + ui/ux</p>
                         <p>|</p>
-                        <a href='https://github.com/sammav21/Clone-Redesign' target="_blank" rel="noopener noreferrer">view code</a>
+                        <a href='https://github.com/sammav21/Clone-Redesign' className='projectLink' target="_blank" rel="noopener noreferrer">view code</a>
                         <p>|</p>
-                        <a href='https://sammav21.github.io/Clone-Redesign/index.html' target="_blank" rel="noopener noreferrer">visit site</a>
+                        <a href='https://sammav21.github.io/Clone-Redesign/index.html' className='projectLink' target="_blank" rel="noopener noreferrer">visit redesign site</a> 
+                        <p>|</p>
+                        <a href='https://www.yo-burger.com/' className='projectLink' target="_blank" rel="noopener noreferrer">visit original site</a>
                     </div>
                     <div className="media">
                         <Picture direction='picture left' src={MEDIA.yoBurgerLanding}/>

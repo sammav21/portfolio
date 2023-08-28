@@ -8,7 +8,7 @@ export default function Quizzical(){
     return(
         <li className="projectTitleContainer" id="quizzicalContainer">
              <img src={MEDIA.yellowBlob} className='yellowBlob' />
-            <h3 className="projectTitle" id="quizzicalTitle" onClick={() => setOpenProject(!openProject)}>Quizzical</h3>
+            <h3 className={openProject ? "projectTitle" : "projectTitle closed"} id="quizzicalTitle" onClick={() => setOpenProject(!openProject)}>Quizzical</h3>
             
             {openProject && 
             <div className="openProject">
@@ -24,9 +24,9 @@ export default function Quizzical(){
                     <div className="infoBar">
                         <p>front end</p>
                         <p>|</p>
-                        <a href='https://github.com/sammav21/quiz-react' target="_blank" rel="noopener noreferrer">view code</a>
+                        <a href='https://github.com/sammav21/quiz-react' className='projectLink' target="_blank" rel="noopener noreferrer">view code</a>
                         <p>|</p>
-                        <a>visit site</a>
+                        <a className='projectLink'>visit site</a>
                     </div>
                     <div className="media">
                         <div className="image"></div>

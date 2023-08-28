@@ -20,9 +20,9 @@ export default function Header({experiencesRef, projectsRef, aboutRef}){
             <p>Samuel Avilés</p>
         </div>
         <nav>
-            <p className='navButton' onClick={() => {handleScroll(experiencesRef.current)}}>experiences</p>
-            <p className='navButton' onClick={() => {handleScroll(projectsRef.current)}}>projects</p>
-            <p className='navButton' onClick={() => {handleScroll(aboutRef.current)}}>about</p>
+            <button className='navButton' onClick={() => {handleScroll(experiencesRef.current)}}>experiences</button>
+            <button className='navButton' onClick={() => {handleScroll(projectsRef.current)}}>projects</button>
+            <button className='navButton' onClick={() => {handleScroll(aboutRef.current)}}>about</button>
         </nav>
     </motion.header>
     )

@@ -8,7 +8,7 @@ export default function PackingAide(){
    
     return(
         <li className="projectTitleContainer" id="packingAideContainer">
-            <h3 className="projectTitle" id="packingAideTitle" onClick={() => setOpenProject(!openProject)}>PACKING AIDE</h3>
+            <h3 className={openProject ? "projectTitle" : "projectTitle closed"} id={openProject ? 'packingAideTitleOpen':"packingAideTitle"} onClick={() => setOpenProject(!openProject)}>PACKING AIDE</h3>
             {openProject && 
             <div className="openProject">
                 <div className="infoSide">
@@ -23,16 +23,16 @@ export default function PackingAide(){
                     <div className="infoBar">
                         <p>full stack</p>
                         <p>|</p>
-                        <a href='https://github.com/DavidVDeaton/packing-aide' target="_blank" rel="noopener noreferrer">view code</a>
+                        <a href='https://github.com/DavidVDeaton/packing-aide' className='projectLink' target="_blank" rel="noopener noreferrer">view code</a>
                         <a>|</a>
-                        <a href='https://www.youtube.com/watch?v=bX3OQgxak7s' target="_blank" rel="noopener noreferrer">watch presentation</a>
+                        <a href='https://www.youtube.com/watch?v=bX3OQgxak7s' className='projectLink' target="_blank" rel="noopener noreferrer">watch presentation</a>
                     </div>
                     <div className="media">
-                        <Video direction='video left' url={MEDIA.packingLanding}/>
-                        <Video direction='video right' url={MEDIA.packingEdit}/>
-                        <Video direction='video left' url={MEDIA.packingAdd}/>
-                        <Video direction='video right' url={MEDIA.packingUpdateContainer}/>
-                        <Video direction='video left' url={MEDIA.packingSearch}/>
+                        <Video direction='videoContainer left' url={MEDIA.packingLanding}/>
+                        <Video direction='videoContainer right' url={MEDIA.packingEdit}/>
+                        <Video direction='videoContainer left' url={MEDIA.packingAdd}/>
+                        <Video direction='videoContainer right' url={MEDIA.packingUpdateContainer}/>
+                        <Video direction='videoContainer left' url={MEDIA.packingSearch}/>
                     </div>
                 </div>
             </div>

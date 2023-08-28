@@ -8,7 +8,7 @@ export default function Photography(){
 
     return(
         <li className="projectTitleContainer" id="photographyContainer">
-            <h3 className="projectTitle" id="photographyTitle" onClick={() => setOpenProject(!openProject)}>Samuel Avilés Photography</h3>
+            <h3 className={openProject ? "projectTitle" : "projectTitle closed"} id="photographyTitle" onClick={() => setOpenProject(!openProject)}>Samuel Avilés Photography</h3>
             {openProject && 
             <div className="openProject">
                 <div className="infoSide">
@@ -23,9 +23,9 @@ export default function Photography(){
                     <div className="infoBar">
                         <p>front end</p>
                         <p>|</p>
-                        <a href='https://github.com/sammav21/Photo-Portfolio' target="_blank" rel="noopener noreferrer">view code</a>
+                        <a href='https://github.com/sammav21/Photo-Portfolio' className='projectLink' target="_blank" rel="noopener noreferrer">view code</a>
                         <p>|</p>
-                        <a href='https://samuelavilesphotography.com/' target="_blank" rel="noopener noreferrer">visit site</a>
+                        <a href='https://samuelavilesphotography.com/' className='projectLink' target="_blank" rel="noopener noreferrer">visit site</a>
                     </div>
                     <div className="media">
                         <Picture direction='picture left' src={MEDIA.photoLanding}/>

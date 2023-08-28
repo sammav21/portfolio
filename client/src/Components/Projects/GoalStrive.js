@@ -8,7 +8,7 @@ export default function GoalStrive(){
 
     return(
         <li className="projectTitleContainer" id="goalStriveContainer">
-            <h3 className="projectTitle" id="goalStriveTitle" onClick={() => setOpenProject(!openProject)}>GoalStrive</h3>
+            <h3 className={openProject ? "projectTitle" : "projectTitle closed"} id="goalStriveTitle" onClick={() => setOpenProject(!openProject)}>GoalStrive</h3>
             {openProject && 
             <div className="openProject">
                 <div className="infoSide">
@@ -23,13 +23,13 @@ export default function GoalStrive(){
                     <div className="infoBar">
                         <p>full stack</p>
                         <p>|</p>
-                        <a href='https://github.com/sammav21/goalsList' target="_blank" rel="noopener noreferrer">view code</a>
+                        <a href='https://github.com/sammav21/goalsList' className='projectLink' target="_blank" rel="noopener noreferrer">view code</a>
                     </div>
                     <div className="media">
-                        <Video direction='video left' url={MEDIA.goalStriveOpening}/>
-                        <Video direction='video right' url={MEDIA.goalStriveTips}/>
-                        <Video direction='video left' url={MEDIA.goalStriveAdd}/>
-                        <Video direction='video right' url={MEDIA.goalStriveUpdate}/>
+                        <Video direction='videoContainer left' url={MEDIA.goalStriveOpening}/>
+                        <Video direction='videoContainer right' url={MEDIA.goalStriveTips}/>
+                        <Video direction='videoContainer left' url={MEDIA.goalStriveAdd}/>
+                        <Video direction='videoContainer right' url={MEDIA.goalStriveUpdate}/>
                     </div>
                 </div>
             </div>
