@@ -1,5 +1,4 @@
 export default function Card(props){
-    console.log(props.tech)
     return(
         <div className="card"> {/*glass effect?*/}
             <h3 className="cardTitle">{props.title}</h3>
