@@ -2,7 +2,7 @@ import { useEffect, useRef, useState } from "react"
 import {motion, useScroll, useTransform} from 'framer-motion';
 import emailjs from "@emailjs/browser" ;
 
-export default function Contact(){
+export default function Contact(props){
 
     const form = useRef();
     const [emailSent, setEmailSent] = useState(false);
@@ -38,7 +38,8 @@ export default function Contact(){
     const xReverse = useTransform(scrollYProgress, [0, 1], [-800, 0]);
 
     return(
-    <motion.section className="contact" ref={targetRef} style={{opacity}}>
+    <div ref={props.contactRef} className="contact">
+    <motion.section ref={targetRef} style={{opacity}}>
         <div className="sectionTitleWrapper">
         <motion.h2 ref={targetRef} style={{x}} className="sectionTitle">CONTACT</motion.h2>
         </div>
@@ -49,7 +50,7 @@ export default function Contact(){
                 <textarea id="message" className="input" name="message" placeholder="message" required/>    
                 {emailSent ? <p>Your message is on its way!</p> : <input type="submit" id="submit" /> }
         </motion.form>
-        
     </motion.section>
+    </div>
     )
 }

@@ -1,6 +1,6 @@
 import {motion} from 'framer-motion';
 
-export default function Header({experiencesRef, projectsRef, aboutRef}){
+export default function Header({experiencesRef, projectsRef, aboutRef, contactRef}){
 
     const handleScroll = (ref) => {
         window.scrollTo({
@@ -16,13 +16,14 @@ export default function Header({experiencesRef, projectsRef, aboutRef}){
     }
     return(
     <motion.header variants={variants} initial='hidden' animate='visible'>
-        <div className="logo">
-            <p>Samuel Avilés</p>
+        <div className="logoWrapper">
+            <p className='logo'>{`sa`}</p>
         </div>
         <nav>
             <button className='navButton' onClick={() => {handleScroll(experiencesRef.current)}}>experiences</button>
             <button className='navButton' onClick={() => {handleScroll(projectsRef.current)}}>projects</button>
             <button className='navButton' onClick={() => {handleScroll(aboutRef.current)}}>about</button>
+            <button className='navButton' onClick={() => {handleScroll(contactRef.current)}}>contact</button>
         </nav>
     </motion.header>
     )
