@@ -28,9 +28,9 @@ export default function Photography(){
                         <a href='https://samuelavilesphotography.com/' className='projectLink' target="_blank" rel="noopener noreferrer">visit site</a>
                     </div>
                     <div className="media">
-                        <Picture direction='picture left' src={MEDIA.photoLanding}/>
-                        <Picture direction='picture right' src={MEDIA.photoPhotos}/>
-                        <Picture direction='picture left' src={MEDIA.photoAbout}/>
+                        <Picture direction='picture left' src={MEDIA.photoLanding} alt='Landing web page. "Samuel Aviles" is written on top of an image of clouds. Navigation menu is open at the bottom right'/>
+                        <Picture direction='picture right' src={MEDIA.photoPhotos} alt='Web page titled "Places". First image shows building facades, secdon image shows a foggy empty beach, final imageshows an aerial view of a moving boat'/>
+                        <Picture direction='picture left' src={MEDIA.photoAbout} alt='Screenshot with image of photographer and text that reads "Samuel Aviles is a photographer born, raised, and based in the Bronx. Shooting since 2012, he documents life as he experiences it with a focus in portraiture and street photography. And that"s about it really. for business inquiries please email S.Aviles0621@gmail.com"'/>
                     </div>
                 </div>
             </div>

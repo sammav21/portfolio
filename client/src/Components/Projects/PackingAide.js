@@ -1,6 +1,7 @@
 import {useState} from 'react';
 import MEDIA from '../../images/media';
 import Video from './Video';
+import {LazyLoadComponent} from 'react-lazy-load-image-component';
 
 export default function PackingAide(){
 
@@ -24,9 +25,10 @@ export default function PackingAide(){
                         <p>full stack</p>
                         <p>|</p>
                         <a href='https://github.com/DavidVDeaton/packing-aide' className='projectLink' target="_blank" rel="noopener noreferrer">view code</a>
-                        <a>|</a>
+                        <p>|</p>
                         <a href='https://www.youtube.com/watch?v=bX3OQgxak7s' className='projectLink' target="_blank" rel="noopener noreferrer">watch presentation</a>
                     </div>
+                    <LazyLoadComponent>
                     <div className="media">
                         <Video direction='videoContainer left' url={MEDIA.packingLanding}/>
                         <Video direction='videoContainer right' url={MEDIA.packingEdit}/>
@@ -34,6 +36,7 @@ export default function PackingAide(){
                         <Video direction='videoContainer right' url={MEDIA.packingUpdateContainer}/>
                         <Video direction='videoContainer left' url={MEDIA.packingSearch}/>
                     </div>
+                    </LazyLoadComponent>
                 </div>
             </div>
             }

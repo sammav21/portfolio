@@ -1,6 +1,7 @@
 import {useState} from 'react';
 import MEDIA from '../../images/media';
 import Video from './Video';
+import {LazyLoadComponent} from 'react-lazy-load-image-component';
 
 export default function GoalStrive(){
 
@@ -25,12 +26,14 @@ export default function GoalStrive(){
                         <p>|</p>
                         <a href='https://github.com/sammav21/goalsList' className='projectLink' target="_blank" rel="noopener noreferrer">view code</a>
                     </div>
+                    <LazyLoadComponent>
                     <div className="media">
                         <Video direction='videoContainer left' url={MEDIA.goalStriveOpening}/>
                         <Video direction='videoContainer right' url={MEDIA.goalStriveTips}/>
                         <Video direction='videoContainer left' url={MEDIA.goalStriveAdd}/>
                         <Video direction='videoContainer right' url={MEDIA.goalStriveUpdate}/>
                     </div>
+                    </LazyLoadComponent>
                 </div>
             </div>
             }
