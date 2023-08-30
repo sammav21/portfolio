@@ -8,7 +8,7 @@ export default function YoBurger(){
     return(
         <li className="projectTitleContainer" id="yoBurgerContainer">
             <div className={openProject ? "projectTitle" : "projectTitle closed"}  onClick={() => setOpenProject(!openProject)}>
-                <img src={MEDIA.yoBurgerLogo} id="yoBurgerTitle"/>
+                <img src={MEDIA.yoBurgerLogo} id="yoBurgerTitle" alt='Logo that reads "YOBURGER"'/>
             </div>
             {openProject && 
             <div className="openProject">
@@ -31,10 +31,10 @@ export default function YoBurger(){
                         <a href='https://www.yo-burger.com/' className='projectLink' target="_blank" rel="noopener noreferrer">visit original site</a>
                     </div>
                     <div className="media">
-                        <Picture direction='picture left' src={MEDIA.yoBurgerLanding}/>
-                        <Picture direction='picture right' src={MEDIA.yoBurgerMenu}/>
-                        <Picture direction='picture left' src={MEDIA.yoBurgerVisit}/>
-                        <Picture direction='picture right' src={MEDIA.yoBurgerFooter}/>
+                        <Picture direction='picture left' src={MEDIA.yoBurgerLanding} alt='Landing web page for Yo-Burger. Text reads "Our concept is simple: Build it your way". On the right a close up of a burger.'/>
+                        <Picture direction='picture right' src={MEDIA.yoBurgerMenu} alt='Web page displaying the food menu'/>
+                        <Picture direction='picture left' src={MEDIA.yoBurgerVisit} alt='Phone screenshot showing business hours, phone number, and location'/>
+                        <Picture direction='picture right' src={MEDIA.yoBurgerFooter} alt='Bottom of web page with company social media links to the left, contact info in the middle, and a link to a job application on the right.'/>
                     </div>
                 </div>
             </div>

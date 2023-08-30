@@ -12,7 +12,7 @@ export default function Header({experiencesRef, projectsRef, aboutRef, contactRe
     
     const variants= {
         hidden: {opacity: 0},
-        visible: {opacity: 1, transition: {duration: 2}}
+        visible: {opacity: 1, transition: {duration: 2, delay: 3}}
     }
     return(
     <motion.header variants={variants} initial='hidden' animate='visible'>

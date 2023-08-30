@@ -2,6 +2,7 @@ import Card from "./Card";
 import MEDIA from "../../images/media.js";
 import {useRef} from 'react';
 import {motion, useScroll, useTransform} from 'framer-motion';
+import {LazyLoadImage} from 'react-lazy-load-image-component';
 
 export default function Experiences(props){
 
@@ -29,8 +30,8 @@ export default function Experiences(props){
             <Card title={"Gonna have a quick look"} id={"firstCardGraphic"} imageContent={<div id="typewriterWrapper">
             <p>&lt;</p>
             <p id="typewriterText">Hello, World!</p><div id="cursor"></div></div>} experience={"Harvard CS50"} text={"A comprehensive introduction to computer science and programming, encompassing topics from foundational algorithms and data structures to web development"} tech={cardOne}/>
-            <Card title={"Just a few more minutes"} id={"secondCardGraphic"} imageContent={<img src={MEDIA.secondCardImage} id="reactImage"/>}experience={"Scrimba"} text={"An in depth exploration of React, from the fundamental concepts of components, props, and state, to more advanced topics like hooks, context, and testing."} tech={cardTwo}/>
-            <Card title={"Job?"} id={"secondCardGraphic"} imageContent={<img src={MEDIA.thirdCardImage} id="javaImage"/>} experience={"Genesis10: DEV10"} text={"A professional introduction to back end development, I accepted a role as a Java Associate which involved rigorous training on OOP, databases, testing, security and software design principles"} tech={cardThree}/>
+            <Card title={"Just a few more minutes"} id={"secondCardGraphic"} imageContent={<LazyLoadImage src={MEDIA.secondCardImage} id="reactImage" alt='graphic of open laptop on which a  man smaller than screen attempts to hang a rectangular component onto the page'/>}experience={"Scrimba"} text={"An in depth exploration of React, from the fundamental concepts of components, props, and state, to more advanced topics like hooks, context, and testing."} tech={cardTwo}/>
+            <Card title={"Job?"} id={"secondCardGraphic"} imageContent={<LazyLoadImage src={MEDIA.thirdCardImage} id="javaImage" alt='Desktop with gear on the screen inside of which is written "API". Surrounding the desktop are various browser tabs and a database server'/>} experience={"Genesis10: DEV10"} text={"A professional introduction to back end development, I accepted a role as a Java Associate which involved rigorous training on OOP, databases, testing, security and software design principles"} tech={cardThree}/>
         </motion.div>
         </motion.section>
     </div>

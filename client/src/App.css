@@ -18,20 +18,20 @@ body{
  width: 100%;
 }
 
-.showToTop{
+.toTopBtn{
   transform-origin: bottom;
   padding: 1.7rem;
   position: fixed;
   border: none;
   right: 0;
   bottom: 0;
-  border-top-left-radius: 100px;
+  border-top-left-radius: 25rem;
   background-color: #28282b;
   display: flex;
   color: #EDECE3;
 }
 
-.showToTop:hover{
+.toTopBtn:hover{
   cursor: pointer;
 }
 
@@ -53,23 +53,16 @@ a{
   top: -70%;
   left: -8%;
   width: 150%;
-  animation: rotation 800s infinite linear
 } 
 
- /* @keyframes rotation {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(359deg);
-  }
-}  */
 .main{
   width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
   backdrop-filter: blur(8px);
+  overflow-x: hidden;
+
 }
 
 
@@ -89,31 +82,22 @@ header{
   padding: 0 .3rem 1.3rem;
   font-weight: 700;
   letter-spacing: -5px;  
-  /* background: linear-gradient(180deg, rgb(114, 124, 133) 10%, rgb(128, 147, 125) 30%, #EDECE3 92%);
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px; */
   background-color: #2a2d35;
   border-radius: 3px;
   color: #EDECE3;
 }
-  
-nav{
-  width: 21rem;
-  display: flex;
-  justify-content: space-between;
-  
-}
 
 .navButton{
   font-family: 'Darker Grotesque', sans-serif;
-  font-size: 1.2rem;
-  padding: .3rem .7rem .5rem; 
+  font-size: 1.3rem;
+  padding: .2rem .5rem .4rem; 
   background-color: #28282b2a;
   box-shadow: 0px 0px 2px #28282b76;
   border-radius: 10px;
   border: none;
   outline: none;
   color: #EDECE3;
+  margin-left: .5em;
 }
 
 .navButton:hover{
@@ -125,11 +109,22 @@ nav{
 /*landing*/
 .landing{
   width: 90%;
-  margin-top: 2rem;
+  height: 80vh;
+
 }
 
-.titleSection{
-  margin: 5rem 3rem;
+.landingContentWrapper{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.landingContent{
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .name{
   font-family: 'Bodoni Moda', serif;
@@ -137,14 +132,17 @@ nav{
   font-weight: 700;
   font-style: italic;
   color: #2a2d35;
+  white-space: pre;
 }
 .subtext{
 font-family: 'Darker Grotesque', sans-serif;
 font-size: 2rem;
 color: #2a2d35;
+white-space: pre;
 }
 
 .experiences, .projects, .about, .contact{
+  margin-top: 1rem;
   width: 90%;
 }
 
@@ -157,7 +155,6 @@ color: #2a2d35;
   justify-content: center;
 }
 .sectionTitle{
-  z-index: -1;
   color: #2a2d35;
   line-height: 1;
   font-family: 'Bodoni Moda', serif;
@@ -186,7 +183,6 @@ color: #2a2d35;
   align-items: center;
   color: #2a2d35;
   font-family: 'Darker Grotesque', sans-serif;
-
 }
 .cardTitle{
   font-size: 1.7rem;
@@ -457,7 +453,6 @@ height: 100%;
   right: 45%;
   font-size: 5rem;
   color: #EDECE3;
-  animation: pulse 1s 5;
 }
 
 .videoOff{
@@ -469,12 +464,6 @@ height: 100%;
 
 #hovered{
   width: 85%;
-}
-
-@keyframes pulse {
- 0%{font-size: 45px}
- 50%{font-size: 55px}
- 100%{font-size: 45px}
 }
 
 .left{
@@ -493,8 +482,8 @@ height: 100%;
 .headshot{
   width: 18rem;
   margin-left: 5rem;
-  border-top-left-radius: 120px;
-  border-top-right-radius: 120px;
+  border-top-left-radius: 40rem;
+  border-top-right-radius: 40rem;
 }
 
 .aboutTextWrapper{
@@ -558,7 +547,7 @@ form{
 }
 
 .input:focus{
-  background-color: #423e1890;
+  background-color: #423e1845;
 }
 #message{
   display: flex;
@@ -583,3 +572,769 @@ form{
   color: #28282B;
   background-color: #edece34f;
 }
+
+@media screen and (max-width: 35.5em) {
+  .colorBlob{
+    top: -25%;
+    left: -35%;
+    width: 200%;
+  } 
+  .toTopBtn{
+    padding: 1.3rem;
+  }
+  .arrow{
+    font-size: 1.3rem;
+  }
+  .name{
+    font-size: 3rem;
+  }
+  .subtext{
+    font-size: 1.5rem;
+  }
+  .sectionTitle{
+    font-size: 2.5rem;
+  }
+  .experiences{
+    height:auto;
+  }
+  .experiencesContent{
+    flex-wrap: wrap;
+  }
+  .card{
+    width: 95%;
+    height: auto;
+    margin: .75rem 0;
+  }
+  .cardImageContainer{
+    width: auto;
+    height: 14rem;
+  }
+  #javaImage{
+  width: 100%;
+  }
+ .cardTitle{
+  font-size: 1.5rem;
+ }
+  .cardTextContainer{
+    font-size: 1.3rem;
+    width: 100%;
+  }
+  .projectTitleContainer{
+    font-size: 2rem;
+    padding: 1rem auto;
+  }
+  .projectTitle{
+   height: 4rem;
+  }
+  .closed:hover{
+    height: 110px;
+  }
+  #photographyTitle{
+    font-size: 2rem;
+  }
+  #yoBurgerTitle{
+    height: 2.75rem;
+  }
+  .openProject{
+    height: 40rem;
+    font-size: 1.2rem;
+    overflow-y: auto;
+    flex-direction: column;
+    justify-content:flex-start;
+    margin: 0;
+  }
+  .infoSide{
+    width: 95%;
+    padding: 0rem;
+  }
+  .techStack{
+    padding: 0.5rem;
+  }
+  .infoBar{
+    margin: 1rem 0 0.25rem;
+    font-size: .8rem;
+  }
+  .infoBar > a, .infoBar > p{
+    padding: .25rem .45rem;
+  }
+  .mediaSide{
+    width: 100%;
+  }
+  .media{
+    overflow-y:visible;
+    padding: .5rem;
+  }
+  .openProject::-webkit-scrollbar {
+    width: 5px;
+  }
+  .videoContainer, .picture{
+    width: 85%;
+  }
+  #hovered{
+    width: 90%;
+  }
+  .about{
+    height: auto;
+  }
+  .aboutContent{
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .headshot{
+    width: 13rem;
+    margin: 0rem;
+  }
+  
+  .aboutTextWrapper{
+    width: 100%;
+    margin: 0rem;
+    font-size: 1.1rem;
+  }
+  .aboutText{
+    padding-top: 0.5rem;
+  }
+  .aboutLink{
+    padding: .15rem;
+  }
+  .aboutLink:hover{
+    padding: .25rem;
+  }
+
+  form{
+    margin: 5rem 0;
+  }
+  .input{
+    width: 20rem;
+  }
+  #message{
+    height: 10rem;
+  }
+  
+  #submit{
+    font-size: 1.2rem;
+    padding: 0.75rem;
+  }
+}
+@media screen and (min-width: 35.5em) and (max-width: 48em) {
+  .colorBlob{
+    top: -45%;
+    left: -35%;
+    width: 200%;
+  } 
+    .toTopBtn{
+      padding: 1rem;
+    }
+    .arrow{
+      font-size: 1rem;
+    }
+    .name{
+      font-size: 4rem;
+    }
+    .subtext{
+      font-size: 1.5rem;
+    }
+    .sectionTitle{
+      font-size: 4rem;
+    }
+    .experiences{
+      height:auto;
+    }
+    .experiencesContent{
+      flex-wrap: wrap;
+    }
+    .card{
+      width: 75%;
+      height: 360px;
+      margin: .75rem 0;
+    }
+    .cardImageContainer{
+      width: 72%;
+      height: 60%;
+    }
+   .cardTitle{
+    font-size: 1.5rem;
+   }
+    .cardTextContainer{
+      font-size: 1.2rem;
+    }
+    .projectTitleContainer{
+      font-size: 1.5rem;
+    }
+    .projectTitle{
+     height: 4rem;
+     padding: 1.5rem 0 0;
+    }
+    .closed:hover{
+      height: 75px;
+    }
+    #photographyTitle{
+      font-size: 2.115rem;
+    }
+    #yoBurgerTitle{
+      height: 2.75rem;
+    }
+    #quizzicalTitle{
+      font-size: 2.23rem;
+    }
+  
+    .openProject{
+      height: 30rem;
+      font-size: 1rem;
+      overflow-y: auto;
+      flex-direction: column;
+      justify-content:flex-start;
+      margin: 0;
+    }
+    .infoSide{
+      width: 95%;
+      padding: 0rem;
+    }
+    .techStack{
+      padding: 0.5rem;
+    }
+    .infoBar{
+      margin: .5rem 0 0.25rem;
+    }
+    .infoBar > a, .infoBar > p{
+      padding: .5rem .4rem;
+    }
+    .mediaSide{
+      width: 95%;
+    }
+    .media{
+      overflow-y:visible;
+      padding: 1rem;
+    }
+    
+    .openProject::-webkit-scrollbar {
+      width: 5px;
+    }
+    .videoContainer, .picture{
+      width: 85%;
+    }
+  
+    #hovered{
+      width: 90%;
+    }
+    .aboutContent{
+      flex-direction: row-reverse;
+      align-items: center;
+      justify-content: center;
+    }
+    .headshot{
+      width: 15rem;
+      margin-left: 0rem;
+    }
+    
+    .aboutTextWrapper{
+      width: 100%;
+      margin-left: 0rem;
+      font-size: 1rem;
+    }
+    .aboutText{
+      padding-top: 1rem;
+    }
+    .aboutLink{
+      padding: .25rem;
+    }
+    .aboutLink:hover{
+      padding: .5rem;
+    }
+    .input{
+      width: 20rem;
+    }
+    #message{
+      height: 8rem;
+    }
+    
+    #submit{
+      font-size: 1rem;
+      padding: 0.75rem;
+    }
+}
+@media screen and (min-width: 48em) and (max-width: 64em) {
+  .colorBlob{
+    top: -55%;
+    left: -35%;
+    width: 200%;
+  } 
+    .toTopBtn{
+      padding: 1rem;
+    }
+    .arrow{
+      font-size: 1rem;
+    }
+
+    .logo{
+      font-size: 3rem;
+    }
+    .name{
+      font-size: 5.5rem;
+    }
+    .sectionTitle{
+      font-size: 5.5rem;
+    }
+    .experiences{
+      height:auto;
+      
+    }
+    .experiencesContent{
+      flex-wrap: wrap;
+    }
+    .card{
+      width: 75%;
+      height: 360px;
+      margin: 1rem 0;
+    }
+    .cardImageContainer{
+      width: 72%;
+      height: 60%;
+    }
+   .cardTitle{
+    font-size: 1.5rem;
+   }
+    .cardTextContainer{
+      font-size: 1.2rem;
+    }
+    .projectTitleContainer{
+      font-size: 2rem;
+    }
+    .closed:hover{
+      height: 65px;
+    }
+    #photographyTitle{
+      font-size: 2.115rem;
+    }
+    #yoBurgerTitle{
+      height: 2.75rem;
+    }
+    #quizzicalTitle{
+      font-size: 2.23rem;
+    }
+  
+    .openProject{
+      height: 23rem;
+      font-size: .8rem;
+    }
+    .infoBar{
+      margin: .5rem 0;
+    }
+    .infoBar > a, .infoBar > p{
+      padding: .4rem .5rem;
+    }
+    .infoSide{
+      padding: 0rem;
+    }
+    .techStack{
+      font-size: .75rem;
+    }
+    
+    .hoverIndicator{
+      font-size: 3rem;  
+    }
+    .headshot{
+      width: 20rem;
+      margin-left: 0rem;
+    }
+    
+    .aboutTextWrapper{
+      width: 55%;
+      margin-left: 1rem;
+      font-size: 1rem;
+    }
+    .aboutText{
+      padding-top: 1rem;
+    }
+    
+    .input{
+      width: 25rem;
+      height: 2rem;
+      font-size: 1rem;
+    }
+    
+    #message{
+      height: 10rem;
+    }
+    
+    #submit{
+      font-size: 1rem;
+    }
+}
+@media screen and (min-width: 64em) and (max-width: 75em){
+  .colorBlob{
+    top: -45%;
+    left: -5%;
+    width: 150%;
+  } 
+    .toTopBtn{
+      padding: 1rem;
+    }
+    .arrow{
+      font-size: 1.25rem;
+    }
+    .logo{
+      font-size: 3.5rem;
+    }
+    .name{
+      font-size: 7.5rem;
+    }
+    .sectionTitle{
+      font-size: 7.5rem;
+    }
+   .cardTitle{
+    font-size: 1.5rem;
+   }
+    .cardTextContainer{
+      font-size: 1.2rem;
+    }
+    .projectTitleContainer{
+      font-size: 3rem;
+    }
+    .closed:hover{
+      height: 90px;
+    }
+    #photographyTitle{
+      font-size: 3.15rem;
+    }
+    #yoBurgerTitle{
+      height: 4.1rem;
+    }
+    #quizzicalTitle{
+      font-size: 3.415rem;
+    }
+  
+    .openProject{
+      height: 25rem;
+      font-size: 1rem;
+    }
+    .infoBar{
+      margin: .5rem 0 .5rem;
+    }
+    .infoBar > a, .infoBar > p{
+      padding: .5rem .5rem;
+    }
+    .infoSide{
+      padding: 0rem 0.25rem;
+    }
+    .techStack{
+      font-size: .80rem;
+    }
+    
+    .hoverIndicator{
+      font-size: 5rem;  
+    }
+    .headshot{
+      width: 23rem;
+      margin-left: 0rem;
+    }
+    
+    .aboutTextWrapper{
+      font-size: 1.3rem;
+    }
+    .aboutText{
+      padding-top: 1rem;
+    }
+    
+    .input{
+      width: 30rem;
+      height: 3rem;
+      font-size: 1.3rem;
+    }
+    
+    #message{
+      height: 10rem;
+    }
+    
+    #submit{
+      font-size: 1.3rem;
+    }
+}
+@media screen and (min-width:120em) {
+  .colorBlob{
+    top: -40%;
+    left: 17%;
+    width: 110%;
+  } 
+    .toTopBtn{
+      padding: 1.75rem;
+    }
+    .arrow{
+      font-size: 2rem;
+    }
+  
+    .logo{
+      font-size: 4rem;
+    }
+  
+    .navButton{
+      font-size: 2rem;
+    }
+    .name{
+      font-size: 14rem;
+    }
+    .subtext{
+    font-size: 4rem;
+    }
+    .sectionTitle{
+      font-size: 14.5rem;
+    }
+    .card{
+      height: 40rem;
+    }
+    .cardTitle{
+      font-size: 2.75rem;
+    }
+    .cardTextContainer{
+      font-size: 2rem;
+    }
+    .projectTitleContainer{
+      font-size: 5rem;
+    }
+    .closed:hover{
+      height: 150px;
+    }
+    #photographyTitle{
+      font-size: 5.285rem;
+    }
+    #yoBurgerTitle{
+      height: 6.88rem;
+    }
+    #quizzicalTitle{
+      font-size: 5.83rem;;
+    }
+  
+    .openProject{
+      height: 45rem;
+      font-size: 1.75rem;
+    }
+    
+    .techStack{
+      font-size: 1.25rem;
+    }
+    
+    .hoverIndicator{
+      top: 35%;
+      font-size: 7rem;  
+    }
+    .headshot{
+      width: 35rem;
+      margin-left: 5rem;
+    }
+    
+    .aboutTextWrapper{
+      font-size: 2.25rem;
+    }
+    .aboutText{
+      padding-top: 1.5rem;
+    }
+    
+    .input{
+      width: 50rem;
+      height: 4rem;
+      font-size: 2.25rem;
+    }
+    
+    #message{
+      height: 20rem;
+    }
+    
+    #submit{
+      margin-top: 1rem;
+      border-radius: 10px;
+      font-size: 2.25rem;
+    }
+  
+  
+}
+
+@media screen and (min-width:160em) { 
+  .toTopBtn{
+    padding: 2.5rem;
+  }
+  .arrow{
+    font-size: 2.5rem;
+  }
+
+  .logo{
+    font-size: 7rem;
+  }
+  
+  .navButton{
+    font-size: 2.4rem;
+  }
+  .name{
+    font-size: 18rem;
+  }
+  .subtext{
+  font-size: 6rem;
+  }
+  .sectionTitle{
+    font-size: 20rem;
+  }
+  .card{
+    height: 55rem;
+  }
+  .cardTitle{
+    font-size: 4rem;
+  }
+  .cardTextContainer{
+    font-size: 2.7rem;
+  }
+  .techLogos{
+    padding-left: 1rem;
+  }
+  
+  .projectTitleContainer{
+    font-size: 7rem;
+  }
+  .closed:hover{
+    height: 200px;
+  }
+  #photographyTitle{
+    font-size: 7.41rem;
+  }
+  #yoBurgerTitle{
+    height: 9.63rem;
+  }
+  #quizzicalTitle{
+    font-size: 8.23rem;;
+  }
+
+  .openProject{
+    height: 60rem;
+    font-size: 2.25rem;
+  }
+  .infoSide{
+    padding: 0rem 1.5rem;
+  }
+  
+  .techStack{
+    font-size: 1.75rem;
+  }
+
+  .media::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  .hoverIndicator{
+    font-size: 10rem;  
+  }
+  .headshot{
+    width: 45rem;
+  }
+  
+  .aboutTextWrapper{
+    font-size: 3rem;
+  }
+  
+  .input{
+    width: 70rem;
+    height: 6rem;
+    font-size: 3rem;
+  }
+  
+  #message{
+    height: 25rem;
+  }
+  
+  #submit{
+    margin-top: 2rem;
+    font-size: 3rem;
+  }
+
+} 
+
+@media screen and (min-width:240em) { 
+  .toTopBtn{
+    padding: 4rem;
+  }
+  .arrow{
+    font-size: 3.5rem;
+  }
+  .logo{
+    font-size: 10rem;
+  }
+  
+  .navButton{
+    font-size: 2.4rem;
+  }
+  .name{
+    font-size: 28rem;
+  }
+  .subtext{
+  font-size: 8rem;
+  }
+  .sectionTitle{
+    font-size: 30rem;
+  }
+  .card{
+    height: 80rem;
+  }
+  .cardTitle{
+    font-size: 5.5rem;
+  }
+
+  .cardTextContainer{
+    font-size: 4.2rem;
+  }
+  
+  .projectTitleContainer{
+    font-size: 10rem;
+  }
+  .closed:hover{
+    height: 275px;
+  }
+  #yoBurgerTitle{
+    height: 13.69rem;
+  }
+  #photographyTitle{
+    font-size: 10.53rem;
+  }
+  #quizzicalTitle{
+    font-size: 11.77rem;;
+  }
+
+  .openProject{
+    height: 80rem;
+    font-size: 3.5rem;
+  }
+  .infoSide{
+    padding: 0rem 2rem;
+  }
+  
+  .techStack{
+    font-size: 3rem;
+  }
+
+  .media::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  .hoverIndicator{
+    font-size: 15rem;  
+  }
+  .headshot{
+    width: 68rem;
+  }
+  
+  .aboutTextWrapper{
+    font-size: 4.5rem;
+  }
+  
+  .input{
+    width: 80rem;
+    height: 10rem;
+    font-size: 4.5rem;
+  }
+  
+
+  #message{
+    height: 30rem;
+  }
+  
+  #submit{
+    font-size: 4.5rem;
+  }
+
+} 

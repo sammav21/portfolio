@@ -23,14 +23,14 @@ export default function About(props){
         <motion.div className="aboutContent" style={{x: xReverse}}>
             <img src={MEDIA.headshot} className='headshot' />
             <div className='aboutTextWrapper'>
-            <p className="aboutText">Hey. I'm Sam. A full stack developer from the Bronx.</p>
-            <p className="aboutText">
+            <p className="aboutText" id="aboutP1">Hey. I'm Sam. A full stack developer from the Bronx.</p>
+            <p className="aboutText" id="aboutP2">
             I like scouring the internet to learn things. It's where I picked up skills in photography, video editing and sound design. So it's no surprise I went down the rabbit hole when a friend suggested I look into the world of coding. I enjoy the creation process from initial concept to completion, and I take pride in bringing an idea to life. Building front end projects and gaining professional back end training along the way, my coding toolkit now spans the spectrum of software development.
             </p>
-            <p className="aboutText">
+            <p className="aboutText" id="aboutP3">
             When I'm not coding, you can find me out of breath on my bike (I said I'd take it easy next time), pretending I'm still good at video games, or watching movies with my wife Jen followed by an hour of showing eachother our favorite Letterboxd reviews.
             </p>
-            <p className="aboutText">
+            <p className="aboutText" id="aboutP4">
             Here are some useful links: 
             <a className='aboutLink' id='resume' href='https://drive.google.com/file/d/1f1pUTAEXoQ0aqZSizgNw3M9b7wn7jrFn/view?usp=sharing' target="_blank" rel="noopener noreferrer">Resume</a>
             <a className='aboutLink' id='github' href='https://github.com/sammav21' target="_blank" rel="noopener noreferrer">GitHub</a>

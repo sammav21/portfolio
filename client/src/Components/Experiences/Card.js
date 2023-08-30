@@ -10,9 +10,9 @@ export default function Card(props){
                 <p>{props.text}</p>
                 <div className="technologies">
                     <p>tech stack:</p>
-                 {props.tech.map((name) => {
+                 {props.tech.map((name, i) => {
                     return (
-                        <p className="techLogos">{name}</p>
+                        <p className="techLogos" key={i}>{name}</p>
                     )
                  })}
                 </div>
