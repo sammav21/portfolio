@@ -13,7 +13,7 @@ function App() {
 
   return (
     <div className="App">
-      <Background />
+      {/* <Background /> */}
       <div className='main'>
           <Header experiencesRef={experiencesRef} projectsRef={projectsRef} aboutRef={aboutRef} contactRef={contactRef}/>
           <Landing/>
