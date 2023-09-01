@@ -9,6 +9,9 @@ body{
   background-color: #EDECE3;
   overflow-x: hidden;
 }
+::-webkit-scrollbar{
+  width: 5px;
+}
 
 #root{
   display: flex;
@@ -86,8 +89,10 @@ header{
   border-radius: 3px;
   color: #EDECE3;
 }
-
-.navButton{
+#menuIcon{
+  display: none;
+}
+.navBtn{
   font-family: 'Darker Grotesque', sans-serif;
   font-size: 1.3rem;
   padding: .2rem .5rem .4rem; 
@@ -100,7 +105,7 @@ header{
   margin-left: .5em;
 }
 
-.navButton:hover{
+.navBtn:hover{
   cursor: pointer;
   color: #2a2d35;
   background-color: #edece34f;
@@ -580,10 +585,51 @@ form{
     width: 200%;
   } 
   .toTopBtn{
-    padding: 1.3rem;
+    padding: 1.5rem;
   }
   .arrow{
     font-size: 1.3rem;
+  }
+
+  nav{
+    position: relative;
+  }
+  #menuIcon{
+    display: block;
+    color: #28282b;
+  }
+  .mobileMenuWrapper{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+  }
+  .mobileMenu{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    position: absolute;
+    right: 0;
+    top: 100%;
+  }
+  .navBtn{
+  display: none;
+  }
+  .mobileNavBtn{
+    font-family: 'Darker Grotesque', sans-serif;
+    width: 100%;
+    font-size: 1.3rem;
+    padding: .3rem 0;
+    border: none;
+    outline: none;
+    background: none;
+    align-self: right;
+  }
+  .mobileNavBtn:hover{
+    background-color: #28282b2a;
+  }
+
+  .landing{
+    height: 60vh;
   }
   .name{
     font-size: 3rem;
@@ -1067,7 +1113,7 @@ form{
       font-size: 4rem;
     }
   
-    .navButton{
+    .navBtn{
       font-size: 2rem;
     }
     .name{
@@ -1160,7 +1206,7 @@ form{
     font-size: 7rem;
   }
   
-  .navButton{
+  .navBtn{
     font-size: 2.4rem;
   }
   .name{
@@ -1256,7 +1302,7 @@ form{
     font-size: 10rem;
   }
   
-  .navButton{
+  .navBtn{
     font-size: 2.4rem;
   }
   .name{
