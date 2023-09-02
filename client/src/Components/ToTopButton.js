@@ -49,7 +49,7 @@ export default function ToTopButton(){
     return(
     <AnimatePresence>
       {toTopButton && 
-      <motion.button className='toTopBtn' onClick={handleScroll} variants={btnVariants} initial='hidden' animate='visible' exit='exit' whileHover='whileHover'>
+      <motion.button className='toTopBtn flex' onClick={handleScroll} variants={btnVariants} initial='hidden' animate='visible' exit='exit' whileHover='whileHover'>
         <span className="material-symbols-outlined arrow">north</span>
         </motion.button>
       }

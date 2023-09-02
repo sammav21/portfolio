@@ -1,8 +1,8 @@
 import { useEffect, useRef, useState } from "react"
-import {motion, useScroll, useTransform} from 'framer-motion';
+import {motion, useScroll, useSpring, useTransform, easeIn} from 'framer-motion';
 import emailjs from "@emailjs/browser" ;
 
-export default function Contact(props){
+export default function Contact({contactRef}){
 
     const form = useRef();
     const [emailSent, setEmailSent] = useState(false);
@@ -32,24 +32,24 @@ export default function Contact(props){
         target: targetRef,
         offset: ['start end', 'end end']
     });
+    const smoothScroll = useSpring(scrollYProgress, { stiffness: 1000, damping: 100, mass: .1 })
 
-    const opacity = useTransform(scrollYProgress, [0, .8], [0, 1]);
-    const x = useTransform(scrollYProgress, [0, 1], [800, 0]);
-    const xReverse = useTransform(scrollYProgress, [0, 1], [-800, 0]);
+    const opacity = useTransform(smoothScroll, [0, .7, 1], [0, 0, 1], {ease: easeIn});
+    const x = useTransform(smoothScroll, [0, 1], ['-50%', '0%'], {ease: easeIn});
 
     return(
-    <div ref={props.contactRef} className="contact">
-    <motion.section ref={targetRef} style={{opacity}}>
-        <div className="sectionTitleWrapper">
-        <motion.h2 ref={targetRef} style={{x}} className="sectionTitle">CONTACT</motion.h2>
+    <div ref={contactRef} className="contact">
+    <motion.section ref={targetRef} style={{opacity, x}}>
+        <div className="w100 flex justify-c">
+        <h2  className="sectionTitle">CONTACT</h2>
         </div>
-        <motion.form ref={form} onSubmit={sendEmail} style={{x: xReverse}}>
+        <form ref={form} onSubmit={sendEmail} className="w100 flex column align-c justify-c">
                 <input type="text" id="username" name="username" className="input" placeholder="name" required/>
                 <input type="email" id="email" name="email" className="input" placeholder="email" required/>
                 <input type="text" id="subject" className="input" name="subject" placeholder="subject"/>            
                 <textarea id="message" className="input" name="message" placeholder="message" required/>    
                 {emailSent ? <p>Your message is on its way!</p> : <input type="submit" id="submit" /> }
-        </motion.form>
+        </form>
     </motion.section>
     </div>
     )

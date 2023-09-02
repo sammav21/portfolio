@@ -1,6 +1,8 @@
 import { useState } from "react";
 import ReactPlayer from 'react-player/lazy';
 import {motion, AnimatePresence} from 'framer-motion';
+import {LazyLoadComponent} from 'react-lazy-load-image-component';
+
 
 export default function Video({direction, url}){
 
@@ -31,13 +33,14 @@ export default function Video({direction, url}){
     }
     // variants={symbolVariants} initial='initial' animate='animate' exit='exit'
     return(
-        <div className={direction}  onMouseEnter={() => setVideoHover(true)} onMouseLeave={() => setVideoHover(false)} id={videoHover ? 'hovered' : undefined} >
-            <div className={!videoHover && 'videoOff'}></div>
+        <LazyLoadComponent>
+        <div className={direction}  onMouseEnter={() => setVideoHover(true)} onMouseLeave={() => setVideoHover(false)} onTouchStart={() => setVideoHover(true)} onTouchEnd={() => setVideoHover(false)} id={videoHover ? 'hovered' : undefined} >
+            <div className={!videoHover && 'videoOff w100'}></div>
             {!videoHover && 
-            <AnimatePresence>
-            <motion.span className="material-symbols-outlined hoverIndicator" >back_hand</motion.span>
-            </AnimatePresence>}
+            <span className="material-symbols-outlined hoverIndicator" >back_hand</span>
+            }
             <ReactPlayer url={url} playing={videoHover} loop width='100%' height='auto' className='testVideo' />
         </div>
+        </LazyLoadComponent>
     )
 }

@@ -1,8 +1,5 @@
 const MEDIA = {
-    beigeNoise: require('./general/beigeBlob.png'),
-    blueNoise: require('./general/blueBlob.png'),
-    greenNoise: require('./general/greenBlob.png'),
-    colorBlob: require('./general/colorBlob.png'),
+    colorBlob: require('./general/colorBlob.webp'),
     secondCardImage: require('./general/Insert block-bro.png'),
     thirdCardImage: require('./general/Application programming interface-rafiki.png'),
     packingLanding: require('./packing-aide/Landing.mp4'),
@@ -17,18 +14,21 @@ const MEDIA = {
     goalStriveAdd: require('./goals/Add.mp4'),
     goalStriveUpdate: require('./goals/Update.mp4'),
     // photography
-    photoLanding: require('./photography/Landing.JPG'),
-    photoPhotos: require('./photography/Photos.JPG'),
+    photoLanding: require('./photography/Landing.webp'),
+    photoPhotos: require('./photography/Photos.webp'),
     photoAbout: require('./photography/About.JPG'),
     // yoburger
     yoBurgerLogo: require('./general/YoBurgerLogo.png'),
-    yoBurgerLanding: require('./yoburger/Landing.JPG'),
-    yoBurgerMenu: require('./yoburger/Menu.JPG'),
-    yoBurgerVisit: require('./yoburger/VisitUsMobile.JPG'),
-    yoBurgerFooter: require('./yoburger/Footer.JPG'),
+    yoBurgerLanding: require('./yoburger/Landing.webp'),
+    yoBurgerMenu: require('./yoburger/Menu.webp'),
+    yoBurgerVisit: require('./yoburger/VisitUsMobile.webp'),
+    yoBurgerFooter: require('./yoburger/Footer.webp'),
     // quizzical
     blueBlob: require('./general/blue-blob.png'),
     yellowBlob: require('./general/yellow-blob.png'),
+    quizLanding: require('./quizzical/Landing.webp'),
+    quizQuiz: require('./quizzical/Quiz.webp'),
+    quizResults: require('./quizzical/Results.webp'),
     // about
     headshot: require('./general/Headshot.jpg')
 }
