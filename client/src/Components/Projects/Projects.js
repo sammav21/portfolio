@@ -1,30 +1,31 @@
 import { useRef } from 'react';
 import {GoalStrive, PackingAide, Photography, Quizzical, YoBurger} from '../Components'
-import { useScroll, useTransform, motion } from 'framer-motion';
+import {motion, useScroll, useSpring, useTransform, easeIn} from 'framer-motion';
 
-export default function Projects(props){
+export default function Projects({projectsRef}){
     const targetRef = useRef(null);
     const {scrollYProgress} = useScroll({
         target: targetRef,
-        offset: ['start end', 'start start', 'end end', 'end start']
+        offset: ['start end', 'start start', 'end start']
     });
-    const opacity = useTransform(scrollYProgress, [0, .25, .75, 1], [0, 1, 1, 0]);
-    const x = useTransform(scrollYProgress, [0, .25, .75, 1], [800, 0, 0, -800]);
-    const xReverse = useTransform(scrollYProgress, [0, .25, .75, 1], [-800, 0, 0, 800]);
+    const smoothScroll = useSpring(scrollYProgress, { stiffness: 1000, damping: 100, mass: .1 })
+
+    const opacity = useTransform(smoothScroll, [0, .25, .50, .75, 1], [0, .5, 1, 1, 0], {ease: easeIn});
+    const x = useTransform(smoothScroll, [0, .35, .50, .85, 1], ['-50%', '0%', '0%', '0%', '50%'], {ease: easeIn} );
 
     return(
-    <div ref={props.projectsRef} className="projects">
-    <motion.section  style={{opacity}} ref={targetRef}>
-        <div className="sectionTitleWrapper">
-        <motion.h2 ref={targetRef} style={{x}} className="sectionTitle">PROJECTS</motion.h2>
+    <div ref={projectsRef} className="projects">
+    <motion.section  style={{opacity, x}} ref={targetRef}>
+        <div className="w100 flex justify-c">
+        <h2 className="sectionTitle">PROJECTS</h2>
         </div>
-        <motion.ul className="projectList" style={{x: xReverse}}>
+        <ul className="projectList flex column">
             <PackingAide />            
             <GoalStrive />
             <Photography />
             <YoBurger />
             <Quizzical />
-        </motion.ul>
+        </ul>
     </motion.section>
     </div>
     )

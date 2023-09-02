@@ -3,7 +3,10 @@
   padding: 0;  
   box-sizing: border-box;
 }
+html, body{
+  scroll-behavior: smooth;
 
+}
 body{
   width: 100%;
   background-color: #EDECE3;
@@ -17,8 +20,35 @@ body{
   display: flex;
   justify-content: center;
 }
-.App{
- width: 100%;
+
+.flex{
+  display: flex;
+}
+.column{
+  flex-direction: column;
+}
+.align-c{
+  align-items: center;
+}
+.justify-c{
+  justify-content: center;
+}
+.w100{
+  width: 100%;
+}
+.h100{
+  height:100% ;
+}
+.w100vw{
+  width: 100vw;
+}
+.h100vh{
+  height:100vh;
+}
+
+.loader{
+  height: 80vh;
+  font-family: 'Bodoni Moda', serif;
 }
 
 .toTopBtn{
@@ -30,7 +60,6 @@ body{
   bottom: 0;
   border-top-left-radius: 25rem;
   background-color: #28282b;
-  display: flex;
   color: #EDECE3;
 }
 
@@ -43,37 +72,31 @@ a{
   color: #28282B;
 }
 
-.beigeBlob{
-  position: fixed;
-  width: 100%;
-  z-index: 1;
-  top: -50%;
-  left: 25%;
-}
 .colorBlob{
   position: fixed;
   z-index: -1;
-  top: -70%;
-  left: -8%;
-  width: 150%;
+  top: -55%;
+  left: -45%;
+  width: 200%;
+  animation: rotate 60s linear 5s infinite;
+  filter: blur(10px);
 } 
-
-.main{
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  backdrop-filter: blur(8px);
-  overflow-x: hidden;
-
+@keyframes rotate {
+  0%{
+    transform: rotate(0deg);
+  }
+  100%{
+    transform: rotate(359deg);
+  }
 }
 
+.main{
+  overflow-x: hidden;
+}
 
 header{
   width: 90%;
-  display: flex;
   justify-content: space-between;
-  align-items: center;
   padding: 2rem 0 0;
   color: #2a2d35;
 }
@@ -116,50 +139,39 @@ header{
 .landing{
   width: 90%;
   height: 80vh;
-
 }
 
 .landingContentWrapper{
-  width: 100%;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  height: 80%;
+  animation: load 1.5s ease-in ;
 }
-.landingContent{
-  display: flex;
-  align-items: center;
-  justify-content: center;
+@keyframes load {
+  from { 
+    filter: blur(10px);
+  }
+  to {filter: blur(0px);  }
 }
+
 .name{
   font-family: 'Bodoni Moda', serif;
   font-size: 9.5rem;
   font-weight: 700;
   font-style: italic;
   color: #2a2d35;
-  white-space: pre;
 }
+
+
 .subtext{
 font-family: 'Darker Grotesque', sans-serif;
 font-size: 2rem;
 color: #2a2d35;
-white-space: pre;
 }
 
 .experiences, .projects, .about, .contact{
-  margin-top: 1rem;
+  margin-top: 5rem;
   width: 90%;
 }
 
-.experiences, .about, .contact{
-  height: 100vh;
-}
-.sectionTitleWrapper{
-  width: 100%;
-  display: flex;
-  justify-content: center;
-}
 .sectionTitle{
   color: #2a2d35;
   line-height: 1;
@@ -169,24 +181,18 @@ white-space: pre;
   font-size: 9.5rem;
 }
 
-
 /*Experiences*/
 .experiencesContent{
-  width: 100%;
-  display: flex;
   justify-content: space-evenly;
 }
 
 .card{
   width: 31%;
-  height: 425px;
+  height: 460px;
   padding: .5rem 1rem;
   background: rgba(40, 40, 43, 0.1);
   box-shadow: -5px 5px 15px #28282b3d;
   border-radius: 20px; 
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   color: #2a2d35;
   font-family: 'Darker Grotesque', sans-serif;
 }
@@ -200,21 +206,17 @@ white-space: pre;
   height: 35%;
   margin-top: .3rem;
   padding: .5rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   overflow: hidden;
   border-bottom: .5px solid #EDECE3;
 }
 #typewriterWrapper{
   margin: 0 auto;
-  display: flex;
-  justify-content: center;
   align-items:last baseline;
   color: #EDECE3;
   font-family: 'Handjet', cursive;
   font-size: 2rem;
 }
+
 #typewriterText{
   overflow: hidden;
   margin-left: .5rem;
@@ -237,25 +239,14 @@ white-space: pre;
   50% { background-color: #EDECE3 }
 }
 
-#reactImage{
-  width: 100%;
-}
-#javaImage{
-height: 100%;
-}
-
 .cardTextContainer{
   width: 90%;
   height: 50%;
   font-size: 1.3rem;
-  display: flex;
-  flex-direction: column;
   align-items: flex-start;
+  justify-content: space-between;
 }
 .technologies{
-  width: 100%;
-  display: flex;
-  align-items: center;
   padding: .3rem .5rem .5rem;
   background: #2a2d35;
   color: #EDECE3;
@@ -266,8 +257,6 @@ height: 100%;
 
 /* projects */
 .projectList{
-  display: flex;
-  flex-direction: column;
   list-style: none;
   background: white;
 }
@@ -275,15 +264,10 @@ height: 100%;
 .projectTitleContainer{
   font-size: 2rem;
   padding: .5rem .5rem;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
   border: #2a2d35 2px solid;
   border-bottom: none;
 }
 .projectTitle{
-  width: 100%;
-  display: flex;
   justify-content: flex-end;
 }
 .projectTitle:hover{
@@ -369,19 +353,14 @@ height: 100%;
 }
 
 .openProject{
-  width: 100%;
   height: 30rem;
   overflow-y: hidden;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   color: #28282B;
   font-size: 1.2rem;
   margin-bottom: 1.5rem;
 }
 .infoBar{
-  width: 100%;
-  display: flex;
+
   margin: 1rem 0 .5rem;
 }
 .infoBar > a, .infoBar > p{
@@ -401,37 +380,25 @@ height: 100%;
 }
 .mediaSide{
   width: 70%;
-  height: 100%;
   margin-left: 1rem;
-  display: flex;
-  flex-direction: column;
   z-index: 1;
 }
 
 .infoSide{
   width: 30%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
   padding: 0rem 1rem;
   z-index: 1;
 }
 
 .techStack{
-  width: 100%;
-  padding: 1rem;
+  padding: .5rem;
   background: #2a2d35;
   color: #EDECE3;
   font-size: 1rem;
 }
 .media{
-  width: 100%;
   overflow-y: auto;
   padding: 2rem;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   background: rgba(40, 40, 43, 0.1);
   box-shadow: 0px 0px 5px #28282b3d;
 }
@@ -459,11 +426,18 @@ height: 100%;
   right: 45%;
   font-size: 5rem;
   color: #EDECE3;
+  animation: pulse 1s linear 2s 5;
+}
+@keyframes pulse {
+50%{
+    scale: 1.2
+}
+100% {
+    scale: 1 }
 }
 
 .videoOff{
   background-color: #28282b91;
-  width: 100%;
   aspect-ratio: 16/9;
   position: absolute;
 }
@@ -477,12 +451,6 @@ height: 100%;
 }
 .right{
   align-self: flex-end;
-}
-.aboutContent{
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 
 .headshot{
@@ -498,8 +466,6 @@ height: 100%;
   font-family: 'Darker Grotesque', sans-serif;
   font-size: 1.3rem;
   font-weight: 600;
-  display: flex;
-  flex-direction: column;
   align-items: flex-start;
 }
 .aboutText{
@@ -532,12 +498,7 @@ height: 100%;
   padding: .75rem; 
 }
 form{
-  width: 100%;
   margin: 3rem 0;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
 }
 
 .input{
@@ -556,7 +517,6 @@ form{
   background-color: #423e1845;
 }
 #message{
-  display: flex;
   height: 100px;
   resize: vertical;
 }
@@ -581,9 +541,9 @@ form{
 
 @media screen and (max-width: 35.5em) {
   .colorBlob{
-    top: -25%;
-    left: -35%;
-    width: 200%;
+    top: -20%;
+    left: -90%;
+    width: 300%;
   } 
   .toTopBtn{
     padding: 1.5rem;
@@ -600,14 +560,9 @@ form{
     color: #28282b;
   }
   .mobileMenuWrapper{
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
+    align-items: flex-start;
   }
   .mobileMenu{
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
     position: absolute;
     right: 0;
     top: 100%;
@@ -617,21 +572,16 @@ form{
   }
   .mobileNavBtn{
     font-family: 'Darker Grotesque', sans-serif;
-    width: 100%;
     font-size: 1.3rem;
     padding: .3rem 0;
     border: none;
     outline: none;
     background: none;
-    align-self: right;
   }
   .mobileNavBtn:hover{
     background-color: #28282b2a;
   }
 
-  .landing{
-    height: 60vh;
-  }
   .name{
     font-size: 3rem;
   }
@@ -720,9 +670,7 @@ form{
   #hovered{
     width: 90%;
   }
-  .about{
-    height: auto;
-  }
+  
   .aboutContent{
     flex-direction: column;
     align-items: center;
@@ -765,9 +713,9 @@ form{
 }
 @media screen and (min-width: 35.5em) and (max-width: 48em) {
   .colorBlob{
-    top: -45%;
-    left: -35%;
-    width: 200%;
+    top: -40%;
+    left: -75%;
+    width: 300%;
   } 
     .toTopBtn{
       padding: 1rem;
@@ -902,9 +850,9 @@ form{
 }
 @media screen and (min-width: 48em) and (max-width: 64em) {
   .colorBlob{
-    top: -55%;
-    left: -35%;
-    width: 200%;
+    top: -45%;
+    left: -65%;
+    width: 250%;
   } 
     .toTopBtn{
       padding: 1rem;
@@ -1011,9 +959,9 @@ form{
 }
 @media screen and (min-width: 64em) and (max-width: 75em){
   .colorBlob{
-    top: -45%;
-    left: -5%;
-    width: 150%;
+    top: -55%;
+    left: -55%;
+    width: 225%;
   } 
     .toTopBtn{
       padding: 1rem;
@@ -1034,7 +982,7 @@ form{
     font-size: 1.5rem;
    }
     .cardTextContainer{
-      font-size: 1.2rem;
+      font-size: 1.1rem;
     }
     .projectTitleContainer{
       font-size: 3rem;
@@ -1098,12 +1046,14 @@ form{
       font-size: 1.3rem;
     }
 }
-@media screen and (min-width:120em) {
+@media screen and (min-width:120em) and (max-width: 160em){
   .colorBlob{
-    top: -40%;
-    left: 17%;
-    width: 110%;
+    top: -75%;
+    left: -15%;
+    width: 160%;
+    filter: blur(13px);
   } 
+
     .toTopBtn{
       padding: 1.75rem;
     }
@@ -1199,6 +1149,13 @@ form{
 }
 
 @media screen and (min-width:160em) { 
+  .colorBlob{
+    top: -75%;
+    left: 0%;
+    width: 130%;
+    filter: blur(17px);
+  } 
+
   .toTopBtn{
     padding: 2.5rem;
   }
@@ -1213,6 +1170,10 @@ form{
   
   .navBtn{
     font-size: 2.4rem;
+  }
+
+  .landingContentWrapper{
+    height: 80%;
   }
   .name{
     font-size: 18rem;
@@ -1307,7 +1268,7 @@ form{
     font-size: 10rem;
     padding: 0 0.5rem 2.5rem;
   }
-  
+
   .navBtn{
     font-size: 2.4rem;
   }

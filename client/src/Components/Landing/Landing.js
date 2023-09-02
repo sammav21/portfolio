@@ -3,18 +3,6 @@ import {motion} from 'framer-motion';
 export default function Landing(){
     const title = Array.from("Samuel Avilés");
     const subtext=Array.from("Full Stack Developer");
-
-    const container= {
-        hidden: {
-            opacity: 1
-        },
-        visible: {
-            opacity: 1, 
-            transition: {
-                duration: 2,
-                staggerChildren: .07
-           }}
-        };
     const letters= {
         hidden: {
             opacity: 0,
@@ -31,17 +19,9 @@ export default function Landing(){
     };
     return(
     <section className="landing" >
-        <div className="landingContentWrapper" >
-            <motion.div className='landingContent' variants={container} initial='hidden' animate='visible'>
-            {title.map((letter, i) => (
-                <motion.h1 key={i} className="name" variants={letters}>{letter}</motion.h1>
-            ))}
-            </motion.div>
-            <motion.h1 className='landingContent' variants={container} initial='hidden' animate='visible'>
-            {subtext.map((letter, i) => (
-                <motion.span key={i} className="subtext" variants={letters}>{letter}</motion.span>
-            ))}
-            </motion.h1>
+        <div className="landingContentWrapper w100 flex column align-c justify-c" >
+                <h1  className="name" >{title}</h1>
+                <motion.span  className="subtext" variants={letters}>{subtext}</motion.span>          
         </div>
     </section>
     )
