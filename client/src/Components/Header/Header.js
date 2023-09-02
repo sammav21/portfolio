@@ -1,5 +1,5 @@
 import {motion} from 'framer-motion';
-import { useState, memo } from 'react';
+import { useState } from 'react';
 
 export default function Header({experiencesRef, projectsRef, aboutRef, contactRef}){
 

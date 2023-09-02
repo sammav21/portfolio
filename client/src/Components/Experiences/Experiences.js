@@ -28,11 +28,10 @@ export default function Experiences({experiencesRef}){
         <h2 className="sectionTitle">EXPERIENCES</h2>
         </div>
         <div className="experiencesContent w100 flex">
-            <Card title={"Gonna have a quick look"} id={"firstCardGraphic"} imageContent={<div className='flex' id="typewriterWrapper">
+            <Card id={"firstCardGraphic"} imageContent={<div className='flex' id="typewriterWrapper">
             <p>&lt;</p>
             <p id="typewriterText">Hello, World!</p><div id="cursor"></div></div>} experience={"Harvard CS50"} text={"A comprehensive introduction to computer science and programming, encompassing topics from foundational algorithms and data structures to web development"} tech={cardOne}/>
             <Card 
-            title={"Just a few more minutes"} 
             id={"secondCardGraphic"} 
             imageContent={<LazyLoadImage 
                             src={MEDIA.secondCardImage} 
@@ -43,7 +42,6 @@ export default function Experiences({experiencesRef}){
             text={"An in depth exploration of React, from the fundamental concepts of components, props, and state, to more advanced topics like hooks, context, and testing."} 
             tech={cardTwo}/>
             <Card 
-            title={"Job?"} 
             id={"secondCardGraphic"} 
             imageContent={<LazyLoadImage 
                             src={MEDIA.thirdCardImage} 

@@ -21,7 +21,7 @@ useEffect(() => {
 }, [])
 
   return (
-    <div className="w100">
+    <div className="App w100">
       <Background />
       {loading 
       ? <div className='loader w100 flex align-c justify-c'>loading up...</div>  

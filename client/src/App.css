@@ -5,8 +5,8 @@
 }
 html, body{
   scroll-behavior: smooth;
-
 }
+
 body{
   width: 100%;
   background-color: #EDECE3;
@@ -71,14 +71,21 @@ a{
   text-decoration: none;
   color: #28282B;
 }
+.imgWrapper{
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: -1;
+  width: 100%;
+  height: 90vh;
+  padding: 0 0 0 5rem;  
+}
 
 .colorBlob{
-  position: fixed;
-  z-index: -1;
-  top: -55%;
-  left: -45%;
-  width: 200%;
-  filter: blur(10px);
+  width: 150%;
+  filter: blur(15px);
 } 
 
 .main{
@@ -129,7 +136,7 @@ header{
 /*landing*/
 .landing{
   width: 90%;
-  height: 80vh;
+  height: 85vh;
 }
 
 .landingContentWrapper{
@@ -179,23 +186,22 @@ color: #2a2d35;
 
 .card{
   width: 31%;
-  height: 460px;
-  padding: .5rem 1rem;
+  height: 375px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: .5rem;
   background: rgba(40, 40, 43, 0.1);
   box-shadow: -5px 5px 15px #28282b3d;
   border-radius: 20px; 
   color: #2a2d35;
   font-family: 'Darker Grotesque', sans-serif;
-}
-.cardTitle{
-  font-size: 1.7rem;
-  letter-spacing: .1rem;
+  
 }
 
 .cardImageContainer{
   width: 90%;
-  height: 35%;
-  margin-top: .3rem;
+  height: 40%;
   padding: .5rem;
   overflow: hidden;
   border-bottom: .5px solid #EDECE3;
@@ -531,11 +537,14 @@ form{
 }
 
 @media screen and (max-width: 35.5em) {
+  .imgWrapper{
+    padding: 0 0 0rem 2rem;  
+  }
   .colorBlob{
-    top: -20%;
-    left: -90%;
     width: 300%;
+    height: 150%;
   } 
+
   .toTopBtn{
     padding: 1.5rem;
   }
@@ -592,6 +601,7 @@ form{
     width: 95%;
     height: auto;
     margin: .75rem 0;
+    padding: 1rem;
   }
   .cardImageContainer{
     width: auto;
@@ -600,9 +610,6 @@ form{
   #javaImage{
   width: 100%;
   }
- .cardTitle{
-  font-size: 1.5rem;
- }
   .cardTextContainer{
     font-size: 1.3rem;
     width: 100%;
@@ -618,7 +625,7 @@ form{
     height: 110px;
   }
   #photographyTitle{
-    font-size: 2rem;
+    font-size: 1.8rem;
   }
   #yoBurgerTitle{
     height: 2.75rem;
@@ -703,21 +710,22 @@ form{
   }
 }
 @media screen and (min-width: 35.5em) and (max-width: 48em) {
+  .imgWrapper{
+    padding: 0 0 0rem 2rem;  
+  }
   .colorBlob{
-    top: -40%;
-    left: -75%;
-    width: 300%;
+    width: 250%;
   } 
-    .toTopBtn{
+  .toTopBtn{
       padding: 1rem;
     }
-    .arrow{
+  .arrow{
       font-size: 1rem;
-    }
-    .name{
+  }
+  .name{
       font-size: 4rem;
     }
-    .subtext{
+  .subtext{
       font-size: 1.5rem;
     }
     .sectionTitle{
@@ -731,16 +739,14 @@ form{
     }
     .card{
       width: 75%;
-      height: 360px;
+      height: 450px;
       margin: .75rem 0;
+      padding: 1rem;
     }
     .cardImageContainer{
       width: 72%;
-      height: 60%;
+      height: 50%;
     }
-   .cardTitle{
-    font-size: 1.5rem;
-   }
     .cardTextContainer{
       font-size: 1.2rem;
     }
@@ -840,11 +846,12 @@ form{
     }
 }
 @media screen and (min-width: 48em) and (max-width: 64em) {
+  .imgWrapper{
+    padding: 0 0 0rem 3rem;  
+  }
   .colorBlob{
-    top: -45%;
-    left: -65%;
-    width: 250%;
-  } 
+    width: 225%;
+  }
     .toTopBtn{
       padding: 1rem;
     }
@@ -871,8 +878,9 @@ form{
     }
     .card{
       width: 75%;
-      height: 360px;
+      height: 400px;
       margin: 1rem 0;
+      padding: 1rem;
     }
     .cardImageContainer{
       width: 72%;
@@ -949,11 +957,12 @@ form{
     }
 }
 @media screen and (min-width: 64em) and (max-width: 75em){
+  .imgWrapper{
+    padding: 0 0 0rem 3rem;  
+  }
   .colorBlob{
-    top: -55%;
-    left: -55%;
-    width: 225%;
-  } 
+    width: 175%;
+  }
     .toTopBtn{
       padding: 1rem;
     }
@@ -1038,12 +1047,7 @@ form{
     }
 }
 @media screen and (min-width:120em) and (max-width: 160em){
-  .colorBlob{
-    top: -75%;
-    left: -15%;
-    width: 160%;
-    filter: blur(13px);
-  } 
+ 
 
     .toTopBtn{
       padding: 1.75rem;
@@ -1072,6 +1076,7 @@ form{
     }
     .card{
       height: 40rem;
+     
     }
     .cardTitle{
       font-size: 2.75rem;
@@ -1141,12 +1146,8 @@ form{
 
 @media screen and (min-width:160em) { 
   .colorBlob{
-    top: -75%;
-    left: 0%;
-    width: 130%;
-    filter: blur(17px);
-  } 
-
+    backdrop-filter: blur(20px);
+  }
   .toTopBtn{
     padding: 2.5rem;
   }
@@ -1249,6 +1250,7 @@ form{
 } 
 
 @media screen and (min-width:240em) { 
+  
   .toTopBtn{
     padding: 4rem;
   }
