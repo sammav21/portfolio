@@ -7,9 +7,9 @@ export default function Quizzical(){
     const [openProject, setOpenProject] = useState(false);
 
     return(
-        <li className="projectTitleContainer w100 flex column" id="quizzicalContainer">
-             <img src={MEDIA.yellowBlob} className='yellowBlob' />
-            <h3 className={openProject ? "projectTitlem w100 flex" : "projectTitle w100 flex closed"} id="quizzicalTitle" onClick={() => setOpenProject(!openProject)}>Quizzical</h3>
+        <li className="projectContainer w100 flex column" id="quizzicalContainer">
+             <img src={MEDIA.yellowBlob} className='yellowBlob' alt='yellowBlob'/>
+            <h3 className={openProject ? "projectTitleContainer w100 flex" : "projectTitleContainer w100 flex closed"} id="quizzicalTitle" onClick={() => setOpenProject(!openProject)}>Quizzical</h3>
             
             {openProject && 
             <div className="openProject w100 flex align-c justify-c">
@@ -35,7 +35,7 @@ export default function Quizzical(){
                         <Picture direction='picture left' src={MEDIA.quizResults} alt='Web page of completed quiz highlighting correct and incorrect answers. Score is shown to user'/>
                     </div>
                 </div>
-                <img src={MEDIA.blueBlob} className='blueBlob' />
+                <img src={MEDIA.blueBlob} className='blueBlob' alt='blueBlob' />
             </div>
             }
             

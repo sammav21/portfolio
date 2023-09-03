@@ -19,13 +19,13 @@ export default function Header({experiencesRef, projectsRef, aboutRef, contactRe
             <p className='logo'>{`sa`}</p>
         </div>
         <nav>
-        <div className={mobileMenuOpen ? 'mobileMenuWrapper flex column' : undefined}>
+        <div className={mobileMenuOpen ? 'menuWrapper flex column' : undefined}>
             <span className="material-symbols-outlined" id='menuIcon' onClick={() => setMobileMenuOpen(!mobileMenuOpen)}>menu</span>
-            <div className={mobileMenuOpen ? 'mobileMenu' : undefined}>
-                <button className={mobileMenuOpen ? 'mobileNavBtn w100' : 'navBtn'} onClick={() => {handleScroll(experiencesRef.current)}}>experiences</button>
-                <button className={mobileMenuOpen ? 'mobileNavBtn w100' : 'navBtn'} onClick={() => {handleScroll(projectsRef.current)}}>projects</button>
-                <button className={mobileMenuOpen ? 'mobileNavBtn w100' : 'navBtn'}onClick={() => {handleScroll(aboutRef.current)}}>about</button>
-                <button className={mobileMenuOpen ? 'mobileNavBtn w100' : 'navBtn'} onClick={() => {handleScroll(contactRef.current)}}>contact</button>
+            <div className={mobileMenuOpen ? 'mobileMenu' : 'webMenu'}>
+                <button className='navBtn' onClick={() => {handleScroll(experiencesRef.current)}}>experiences</button>
+                <button className='navBtn' onClick={() => {handleScroll(projectsRef.current)}}>projects</button>
+                <button className='navBtn' onClick={() => {handleScroll(aboutRef.current)}}>about</button>
+                <button className='navBtn' onClick={() => {handleScroll(contactRef.current)}}>contact</button>
             </div>
         </div>
         </nav>

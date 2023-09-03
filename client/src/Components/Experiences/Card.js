@@ -1,6 +1,6 @@
 export default function Card(props){
     return(
-        <div className="card flex column align-c"> {/*glass effect?*/}
+        <div className="card flex column align-c">
             <div className="cardImageContainer flex align-c justify-c" id={props.id}> 
             {props.imageContent}
             </div>

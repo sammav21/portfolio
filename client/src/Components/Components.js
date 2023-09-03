@@ -10,4 +10,3 @@ export {default as Photography} from "./Projects/Photography";
 export {default as Quizzical} from "./Projects/Quizzical";
 export {default as YoBurger} from "./Projects/YoBurger";
 export {default as ToTopButton} from './ToTopButton';
-export {default as Background} from './Background';

@@ -34,8 +34,8 @@ export default function Contact({contactRef}){
     });
     const smoothScroll = useSpring(scrollYProgress, { stiffness: 1000, damping: 100, mass: .1 })
 
-    const opacity = useTransform(smoothScroll, [0, .7, 1], [0, 0, 1], {ease: easeIn});
-    const x = useTransform(smoothScroll, [0, 1], ['-50%', '0%'], {ease: easeIn});
+    const opacity = useTransform(smoothScroll, [0, .7], [0, 1], {ease: easeIn});
+    const x = useTransform(smoothScroll, [0, .7], ['-50%', '0%'], {ease: easeIn});
 
     return(
     <div ref={contactRef} className="contact">

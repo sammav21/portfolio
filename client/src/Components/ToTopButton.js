@@ -1,5 +1,5 @@
 import {useState, useEffect} from 'react';
-import {motion, AnimatePresence} from 'framer-motion';
+import {motion} from 'framer-motion';
 
 export default function ToTopButton(){
 
@@ -25,15 +25,6 @@ export default function ToTopButton(){
             ease: 'linear'
           }
         },
-        exit: {
-          opacity: 0,
-          x: 200,
-          scale: 0,
-          transition: {
-            duration: .5,
-            ease: 'linear'
-          }
-        },
         whileHover: {
             scale: 1.1,
             transition: { 
@@ -47,12 +38,12 @@ export default function ToTopButton(){
       }, []);
 
     return(
-    <AnimatePresence>
+    <>
       {toTopButton && 
-      <motion.button className='toTopBtn flex' onClick={handleScroll} variants={btnVariants} initial='hidden' animate='visible' exit='exit' whileHover='whileHover'>
+      <motion.button className='toTopBtn flex' onClick={handleScroll} variants={btnVariants} initial='hidden' animate='visible' whileHover='whileHover'>
         <span className="material-symbols-outlined arrow">north</span>
-        </motion.button>
+      </motion.button>
       }
-    </AnimatePresence>
+    </>
     )
 }

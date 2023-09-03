@@ -114,6 +114,10 @@ header{
 #menuIcon{
   display: none;
 }
+.menuWrapper{
+  align-items: flex-end;
+ }
+
 .navBtn{
   font-family: 'Darker Grotesque', sans-serif;
   font-size: 1.3rem;
@@ -186,7 +190,7 @@ color: #2a2d35;
 
 .card{
   width: 31%;
-  height: 375px;
+  height: 400px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -238,7 +242,7 @@ color: #2a2d35;
 
 .cardTextContainer{
   width: 90%;
-  height: 50%;
+  height: 55%;
   font-size: 1.3rem;
   align-items: flex-start;
   justify-content: space-between;
@@ -258,16 +262,17 @@ color: #2a2d35;
   background: white;
 }
 
-.projectTitleContainer{
+.projectContainer{
   font-size: 2rem;
-  padding: .5rem .5rem;
+  padding: 1rem .5rem;
   border: #2a2d35 2px solid;
   border-bottom: none;
 }
-.projectTitle{
+.projectTitleContainer{
+  align-items: center;
   justify-content: flex-end;
 }
-.projectTitle:hover{
+.projectTitleContainer:hover{
   cursor: pointer;
 }
 .closed:hover{
@@ -281,6 +286,7 @@ color: #2a2d35;
 #packingAideTitle{
   color: #f6f6f6;
   font-family: 'Raleway';
+  text-shadow: -1px 1px #0077B5;
 }
 #packingAideTitleOpen{
   color: #0d8cd4;
@@ -505,13 +511,16 @@ form{
   outline: none;
   width: 400px;
   height: 40px;
-  color: #28282B;
+  color: #EDECE3;
   font-family: 'Darker Grotesque', sans-serif;
   font-size: 1.5rem;
 }
 
 .input:focus{
   background-color: #423e1845;
+}
+::placeholder{
+  color: #EDECE3;
 }
 #message{
   height: 100px;
@@ -559,8 +568,8 @@ form{
     display: block;
     color: #28282b;
   }
-  .mobileMenuWrapper{
-    align-items: flex-start;
+  .webMenu{
+    display: none;
   }
   .mobileMenu{
     position: absolute;
@@ -568,18 +577,18 @@ form{
     top: 100%;
   }
   .navBtn{
-  display: none;
-  }
-  .mobileNavBtn{
     font-family: 'Darker Grotesque', sans-serif;
     font-size: 1.3rem;
-    padding: .3rem 0;
-    border: none;
-    outline: none;
+    padding: 0.25rem 0;
     background: none;
+    color: #2a2d35;
+    box-shadow: none;
+    border-radius: 0px;
+    width: 100%;
+    margin: 0;
   }
-  .mobileNavBtn:hover{
-    background-color: #28282b2a;
+  .navBtn:hover{
+    background-color: #edece364;
   }
 
   .name{
@@ -614,18 +623,19 @@ form{
     font-size: 1.3rem;
     width: 100%;
   }
-  .projectTitleContainer{
-    font-size: 2rem;
-    padding: 1rem auto;
+  .projectContainer{
+    font-size: 1.75rem;
+    padding: 1rem .5rem;
   }
-  .projectTitle{
+  .projectTitleContainer{
    height: 4rem;
   }
   .closed:hover{
     height: 110px;
   }
+
   #photographyTitle{
-    font-size: 1.8rem;
+    font-size: 1.45rem;
   }
   #yoBurgerTitle{
     height: 2.75rem;
@@ -722,6 +732,9 @@ form{
   .arrow{
       font-size: 1rem;
   }
+  .mobileNavBtn{
+    display: none;
+  }
   .name{
       font-size: 4rem;
     }
@@ -750,26 +763,19 @@ form{
     .cardTextContainer{
       font-size: 1.2rem;
     }
-    .projectTitleContainer{
-      font-size: 1.5rem;
+    .projectContainer{
+      font-size: 2rem;
     }
-    .projectTitle{
+    .projectTitleContainer{
      height: 4rem;
-     padding: 1.5rem 0 0;
     }
     .closed:hover{
       height: 75px;
     }
-    #photographyTitle{
-      font-size: 2.115rem;
-    }
+
     #yoBurgerTitle{
       height: 2.75rem;
     }
-    #quizzicalTitle{
-      font-size: 2.23rem;
-    }
-  
     .openProject{
       height: 30rem;
       font-size: 1rem;
@@ -861,7 +867,6 @@ form{
 
     .logo{
       font-size: 3rem;
-      
     }
     .name{
       font-size: 5.5rem;
@@ -892,7 +897,7 @@ form{
     .cardTextContainer{
       font-size: 1.2rem;
     }
-    .projectTitleContainer{
+    .projectContainer{
       font-size: 2rem;
     }
     .closed:hover{
@@ -904,9 +909,7 @@ form{
     #yoBurgerTitle{
       height: 2.75rem;
     }
-    #quizzicalTitle{
-      font-size: 2.23rem;
-    }
+
   
     .openProject{
       height: 23rem;
@@ -978,13 +981,14 @@ form{
     .sectionTitle{
       font-size: 7.5rem;
     }
+
    .cardTitle{
     font-size: 1.5rem;
    }
     .cardTextContainer{
       font-size: 1.1rem;
     }
-    .projectTitleContainer{
+    .projectContainer{
       font-size: 3rem;
     }
     .closed:hover{
@@ -996,9 +1000,7 @@ form{
     #yoBurgerTitle{
       height: 4.1rem;
     }
-    #quizzicalTitle{
-      font-size: 3.415rem;
-    }
+
   
     .openProject{
       height: 25rem;
@@ -1084,8 +1086,9 @@ form{
     .cardTextContainer{
       font-size: 2rem;
     }
-    .projectTitleContainer{
+    .projectContainer{
       font-size: 5rem;
+      padding: 2rem;
     }
     .closed:hover{
       height: 150px;
@@ -1096,10 +1099,6 @@ form{
     #yoBurgerTitle{
       height: 6.88rem;
     }
-    #quizzicalTitle{
-      font-size: 5.83rem;;
-    }
-  
     .openProject{
       height: 45rem;
       font-size: 1.75rem;
@@ -1189,7 +1188,7 @@ form{
     padding-left: 1rem;
   }
   
-  .projectTitleContainer{
+  .projectContainer{
     font-size: 7rem;
   }
   .closed:hover{
@@ -1200,9 +1199,6 @@ form{
   }
   #yoBurgerTitle{
     height: 9.63rem;
-  }
-  #quizzicalTitle{
-    font-size: 8.23rem;;
   }
 
   .openProject{
@@ -1285,8 +1281,9 @@ form{
     font-size: 4.2rem;
   }
   
-  .projectTitleContainer{
+  .projectContainer{
     font-size: 10rem;
+    
   }
   .closed:hover{
     height: 275px;
@@ -1296,9 +1293,6 @@ form{
   }
   #photographyTitle{
     font-size: 10.53rem;
-  }
-  #quizzicalTitle{
-    font-size: 11.77rem;;
   }
 
   .openProject{

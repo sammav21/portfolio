@@ -7,8 +7,8 @@ export default function Photography(){
     const [openProject, setOpenProject] = useState(false);
 
     return(
-        <li className="projectTitleContainer w100 flex column" id="photographyContainer">
-            <h3 className={openProject ? "projectTitle w100 flex" :  "projectTitle w100 flex closed"} id="photographyTitle" onClick={() => setOpenProject(!openProject)}>Samuel Avilés Photography</h3>
+        <li className="projectContainer w100 flex column" id="photographyContainer">
+            <h3 className={openProject ? "projectTitleContainer w100 flex" :  "projectTitleContainer w100 flex closed"} id="photographyTitle" onClick={() => setOpenProject(!openProject)}>Samuel Avilés Photography</h3>
             {openProject && 
             <div className="openProject w100 flex align-c justify-c">
                 <div className="infoSide flex column align-c justify-c">

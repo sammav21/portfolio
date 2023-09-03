@@ -8,8 +8,8 @@ export default function PackingAide(){
     const [openProject, setOpenProject] = useState(false);
    
     return(
-        <li className="projectTitleContainer w100 flex column" id="packingAideContainer">
-            <h3 className={openProject ? "projectTitle w100 flex" : "projectTitle w100 flex closed"} id={openProject ? 'packingAideTitleOpen':"packingAideTitle"} onClick={() => setOpenProject(!openProject)}>PACKING AIDE</h3>
+        <li className="projectContainer w100 flex column" id="packingAideContainer">
+            <div className={openProject ? "projectTitleContainer w100 flex" : "projectTitleContainer w100 flex closed"}  onClick={() => setOpenProject(!openProject)}><h3 id={openProject ? 'packingAideTitleOpen':"packingAideTitle"}>PACKING AIDE</h3></div>
             {openProject && 
             <div className="openProject w100 flex align-c justify-c">
                 <div className="infoSide flex column align-c justify-c">

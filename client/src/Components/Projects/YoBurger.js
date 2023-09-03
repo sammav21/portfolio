@@ -6,8 +6,8 @@ export default function YoBurger(){
     const [openProject, setOpenProject] = useState(false);
 
     return(
-        <li className="projectTitleContainer w100 flex column" id="yoBurgerContainer">
-            <div className={openProject ? "projectTitle w100 flex" : "projectTitle w100 flex closed"}  onClick={() => setOpenProject(!openProject)}>
+        <li className="projectContainer w100 flex column" id="yoBurgerContainer">
+            <div className={openProject ? "projectTitleContainer w100 flex" : "projectTitleContainer w100 flex closed"}  onClick={() => setOpenProject(!openProject)}>
                 <img src={MEDIA.yoBurgerLogo} id="yoBurgerTitle" alt='Logo that reads "YOBURGER"'/>
             </div>
             {openProject && 
