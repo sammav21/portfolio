@@ -1,7 +1,5 @@
 const MEDIA = {
     colorBlob: require('./general/colorBlob.webp'),
-    secondCardImage: require('./general/Insert block-bro.png'),
-    thirdCardImage: require('./general/Application programming interface-rafiki.png'),
     packingLanding: require('./packing-aide/Landing.mp4'),
     // packingaide
     packingAdd: require('./packing-aide/Add.mp4'),

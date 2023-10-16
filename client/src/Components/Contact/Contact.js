@@ -42,13 +42,16 @@ export default function Contact({contactRef}){
     <motion.section ref={targetRef} style={{opacity, x}}>
         <div className="w100 flex justify-c">
         <h2  className="sectionTitle">CONTACT</h2>
+        
         </div>
         <form ref={form} onSubmit={sendEmail} className="w100 flex column align-c justify-c">
+                <p className="formTitle">Let's Connect</p>
                 <input type="text" id="username" name="username" className="input" placeholder="name" required/>
                 <input type="email" id="email" name="email" className="input" placeholder="email" required/>
                 <input type="text" id="subject" className="input" name="subject" placeholder="subject"/>            
                 <textarea id="message" className="input" name="message" placeholder="message" required/>    
-                {emailSent ? <p>Your message is on its way!</p> : <input type="submit" id="submit" /> }
+                {emailSent ? <p id="successMessage">Your message is on its way!</p> : <input type="submit" id="submit" /> }
+                
         </form>
     </motion.section>
     </div>

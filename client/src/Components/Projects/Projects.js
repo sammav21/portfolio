@@ -20,10 +20,10 @@ export default function Projects({projectsRef}){
         <h2 className="sectionTitle">PROJECTS</h2>
         </div>
         <ul className="projectList flex column">
-            <PackingAide />            
-            <GoalStrive />
             <Photography />
+            <PackingAide />  
             <YoBurger />
+            <GoalStrive />
             <Quizzical />
         </ul>
     </motion.section>

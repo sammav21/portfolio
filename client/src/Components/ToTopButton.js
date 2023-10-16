@@ -35,6 +35,9 @@ export default function ToTopButton(){
 
     useEffect(() => {
         window.addEventListener('scroll', handleVisibleButton);
+        return() => {
+          window.removeEventListener('scroll', handleVisibleButton)
+        }
       }, []);
 
     return(

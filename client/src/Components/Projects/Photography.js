@@ -13,10 +13,10 @@ export default function Photography(){
             <div className="openProject w100 flex align-c justify-c">
                 <div className="infoSide flex column align-c justify-c">
                         <div className="descriptionText">
-                        My first project ever! Knocking out two birds with one stone, I created my long overdue photography portfolio using the fundamental HTML and CSS skills I was just beginning to learn. The code for this project isn't pretty, but it marks an important shift in my career journey. 
+                        My first project ever! I initially created my photography portfolio using fundamental HTML and CSS skills I was just beginning to learn. Over time, I  updated the site using Next.js for server side rendering and SASS for more efficient styling. I've revamped the design, refactored the code structure, and enhanced performance. Feel free to checkout the original code in the "oldClient" folder.
                         </div>
                         <div className="techStack w100">
-                            Tech Stack: HTML & CSS
+                            Tech Stack: Next.js, React.js, SASS
                         </div>
                 </div>
                 <div className="mediaSide h100 flex column">
@@ -25,7 +25,7 @@ export default function Photography(){
                         <p>|</p>
                         <a href='https://github.com/sammav21/Photo-Portfolio' className='projectLink' target="_blank" rel="noopener noreferrer">view code</a>
                         <p>|</p>
-                        <a href='https://samuelavilesphotography.com/' className='projectLink' target="_blank" rel="noopener noreferrer">visit site</a>
+                        <a href='https://www.samuelavilesphotography.com/' className='projectLink' target="_blank" rel="noopener noreferrer">visit site</a>
                     </div>
                     <div className="media w100 flex column align-c">
                         <Picture direction='picture left' src={MEDIA.photoLanding} alt='Landing web page. "Samuel Aviles" is written on top of an image of clouds. Navigation menu is open at the bottom right'/>

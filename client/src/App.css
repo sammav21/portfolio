@@ -169,7 +169,7 @@ font-size: 2rem;
 color: #2a2d35;
 }
 
-.experiences, .projects, .about, .contact{
+.projects, .about, .contact{
   margin-top: 5rem;
   width: 90%;
 }
@@ -181,79 +181,6 @@ color: #2a2d35;
   font-style: italic;
   letter-spacing: .3rem;
   font-size: 9.5rem;
-}
-
-/*Experiences*/
-.experiencesContent{
-  justify-content: space-evenly;
-}
-
-.card{
-  width: 31%;
-  height: 400px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  padding: .5rem;
-  background: rgba(40, 40, 43, 0.1);
-  box-shadow: -5px 5px 15px #28282b3d;
-  border-radius: 20px; 
-  color: #2a2d35;
-  font-family: 'Darker Grotesque', sans-serif;
-  
-}
-
-.cardImageContainer{
-  width: 90%;
-  height: 40%;
-  padding: .5rem;
-  overflow: hidden;
-  border-bottom: .5px solid #EDECE3;
-}
-#typewriterWrapper{
-  margin: 0 auto;
-  align-items:last baseline;
-  color: #EDECE3;
-  font-family: 'Handjet', cursive;
-  font-size: 2rem;
-}
-
-#typewriterText{
-  overflow: hidden;
-  margin-left: .5rem;
-  white-space: nowrap;
-  animation: typing 2s steps(35, end) infinite;
-}
-@keyframes typing {
-  from { width: 0 }
-  to { width: 100% }
-}
-#cursor{
-  width: .55rem;
-  height: .3rem;
-  background-color: #EDECE3;
-  animation: cursor 1s step-end infinite;
-}
-
-@keyframes cursor {
-  from, to { background-color: transparent }
-  50% { background-color: #EDECE3 }
-}
-
-.cardTextContainer{
-  width: 90%;
-  height: 55%;
-  font-size: 1.3rem;
-  align-items: flex-start;
-  justify-content: space-between;
-}
-.technologies{
-  padding: .3rem .5rem .5rem;
-  background: #2a2d35;
-  color: #EDECE3;
-}
-.techLogos{
-  padding-left: .4rem;
 }
 
 /* projects */
@@ -271,12 +198,14 @@ color: #2a2d35;
 .projectTitleContainer{
   align-items: center;
   justify-content: flex-end;
+  height: 4rem;
+  transition: .5s;
 }
 .projectTitleContainer:hover{
   cursor: pointer;
 }
 .closed:hover{
-  height: 75px;
+  height: 5rem;
 }
 #packingAideContainer{
   background: linear-gradient(173deg, #D4E8FF80 30%, #f6f6f6 55%, #0d8cd4 55.2%);
@@ -500,6 +429,11 @@ color: #2a2d35;
   cursor: pointer;
   padding: .75rem; 
 }
+.formTitle{
+  font-family: 'Darker Grotesque', sans-serif;
+  font-size: 2rem;
+  color: #EDECE3;
+}
 form{
   margin: 3rem 0;
 }
@@ -526,7 +460,12 @@ form{
   height: 100px;
   resize: vertical;
 }
-
+#successMessage{
+  margin-top: 1rem;
+  font-size: 1.5rem;
+  font-family: 'Darker Grotesque', sans-serif;
+  color: #28282B;
+}
 #submit{
   margin-top: 1rem;
   padding: .8rem 1rem 1rem; 
@@ -600,29 +539,7 @@ form{
   .sectionTitle{
     font-size: 2.5rem;
   }
-  .experiences{
-    height:auto;
-  }
-  .experiencesContent{
-    flex-wrap: wrap;
-  }
-  .card{
-    width: 95%;
-    height: auto;
-    margin: .75rem 0;
-    padding: 1rem;
-  }
-  .cardImageContainer{
-    width: auto;
-    height: 14rem;
-  }
-  #javaImage{
-  width: 100%;
-  }
-  .cardTextContainer{
-    font-size: 1.3rem;
-    width: 100%;
-  }
+ 
   .projectContainer{
     font-size: 1.75rem;
     padding: 1rem .5rem;
@@ -744,25 +661,7 @@ form{
     .sectionTitle{
       font-size: 4rem;
     }
-    .experiences{
-      height:auto;
-    }
-    .experiencesContent{
-      flex-wrap: wrap;
-    }
-    .card{
-      width: 75%;
-      height: 450px;
-      margin: .75rem 0;
-      padding: 1rem;
-    }
-    .cardImageContainer{
-      width: 72%;
-      height: 50%;
-    }
-    .cardTextContainer{
-      font-size: 1.2rem;
-    }
+
     .projectContainer{
       font-size: 2rem;
     }
@@ -874,34 +773,14 @@ form{
     .sectionTitle{
       font-size: 5.5rem;
     }
-    .experiences{
-      height:auto;
-      
-    }
-    .experiencesContent{
-      flex-wrap: wrap;
-    }
-    .card{
-      width: 75%;
-      height: 400px;
-      margin: 1rem 0;
-      padding: 1rem;
-    }
-    .cardImageContainer{
-      width: 72%;
-      height: 60%;
-    }
-   .cardTitle{
-    font-size: 1.5rem;
-   }
-    .cardTextContainer{
-      font-size: 1.2rem;
-    }
     .projectContainer{
       font-size: 2rem;
     }
+    .projectTitleContainer{
+      height: 4rem;
+     }
     .closed:hover{
-      height: 65px;
+      height: 4.5rem;
     }
     #photographyTitle{
       font-size: 2.115rem;
@@ -909,8 +788,6 @@ form{
     #yoBurgerTitle{
       height: 2.75rem;
     }
-
-  
     .openProject{
       height: 23rem;
       font-size: .8rem;
@@ -982,15 +859,11 @@ form{
       font-size: 7.5rem;
     }
 
-   .cardTitle{
-    font-size: 1.5rem;
-   }
-    .cardTextContainer{
-      font-size: 1.1rem;
-    }
+
     .projectContainer{
       font-size: 3rem;
     }
+   
     .closed:hover{
       height: 90px;
     }
@@ -1076,28 +949,20 @@ form{
     .sectionTitle{
       font-size: 14.5rem;
     }
-    .card{
-      height: 40rem;
-     
-    }
-    .cardTitle{
-      font-size: 2.75rem;
-    }
-    .cardTextContainer{
-      font-size: 2rem;
-    }
+    
     .projectContainer{
-      font-size: 5rem;
+      font-size: 4rem;
       padding: 2rem;
     }
+    
     .closed:hover{
-      height: 150px;
+      height: 6rem;
     }
     #photographyTitle{
-      font-size: 5.285rem;
+      font-size: 4rem;
     }
     #yoBurgerTitle{
-      height: 6.88rem;
+      height: 5.5rem;
     }
     .openProject{
       height: 45rem;
@@ -1129,7 +994,9 @@ form{
       height: 4rem;
       font-size: 2.25rem;
     }
-    
+    #successMessage{
+      font-size: 2.25rem;
+    }
     #message{
       height: 20rem;
     }
@@ -1142,8 +1009,8 @@ form{
   
   
 }
-
 @media screen and (min-width:160em) { 
+  
   .colorBlob{
     backdrop-filter: blur(20px);
   }
@@ -1175,30 +1042,21 @@ form{
   .sectionTitle{
     font-size: 20rem;
   }
-  .card{
-    height: 55rem;
-  }
-  .cardTitle{
-    font-size: 4rem;
-  }
-  .cardTextContainer{
-    font-size: 2.7rem;
-  }
-  .techLogos{
-    padding-left: 1rem;
-  }
   
   .projectContainer{
-    font-size: 7rem;
+    font-size: 6rem;
+  }
+  .projectTitleContainer{
+    height: 8rem;
   }
   .closed:hover{
-    height: 200px;
+    height: 10rem;
   }
   #photographyTitle{
-    font-size: 7.41rem;
+    font-size: 6rem;
   }
   #yoBurgerTitle{
-    height: 9.63rem;
+    height: 8rem;
   }
 
   .openProject{
@@ -1227,12 +1085,18 @@ form{
   .aboutTextWrapper{
     font-size: 3rem;
   }
-  
+  .formTitle{
+    font-size: 4rem;
+  }
+  #successMessage{
+    font-size: 3rem;
+  }
   .input{
     width: 70rem;
     height: 6rem;
     font-size: 3rem;
   }
+
   
   #message{
     height: 25rem;
@@ -1270,23 +1134,15 @@ form{
   .sectionTitle{
     font-size: 30rem;
   }
-  .card{
-    height: 80rem;
-  }
-  .cardTitle{
-    font-size: 5.5rem;
-  }
-
-  .cardTextContainer{
-    font-size: 4.2rem;
-  }
   
   .projectContainer{
     font-size: 10rem;
-    
+  }
+  .projectTitleContainer{
+    height: 15rem;
   }
   .closed:hover{
-    height: 275px;
+    height: 20rem;
   }
   #yoBurgerTitle{
     height: 13.69rem;
@@ -1321,13 +1177,17 @@ form{
   .aboutTextWrapper{
     font-size: 4.5rem;
   }
-  
+  .formTitle{
+    font-size: 6rem;
+  }
   .input{
     width: 80rem;
     height: 10rem;
     font-size: 4.5rem;
   }
-  
+  #successMessage{
+    font-size: 4.5rem;
+  }
 
   #message{
     height: 30rem;
